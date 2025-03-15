@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:yds_words/config/extensions/context_extension.dart';
 import 'package:yds_words/config/items/colors/app_colors.dart';
 
+import '../../../../config/router/route_names.dart';
 import '../widgets/progress_card.dart';
 
 class Home extends StatelessWidget {
@@ -34,7 +35,9 @@ class Home extends StatelessWidget {
               Padding(
                 padding: context.paddingVerticalLow,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, RouteNames.wordLearningView);
+                  },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.kWhiteColor,
                     shape: RoundedRectangleBorder(
