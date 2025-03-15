@@ -1,75 +1,69 @@
 import 'package:flutter/material.dart';
 
+/// Renklerin derleme zamanında sabit (compile-time constant) olabilmesi için
+/// index operatörü [ ] kullanılmadan, doğrudan Color(...) ile tanımlıyoruz.
+///
+/// #756EF3 (mor) baz alınmış bir palette örneği.
 class AppColors {
-  // Primary Theme Colors
-  static const Color kPrimaryColor = Color(0xFF925BFE);
-  static const Color kSecondaryColor = Color(0xFF756EF3);
-  static const Color kBackgroundColor = Color(0xFFF0F5F5);
-  static const Color kScaffoldColor = Color(0xFFF0F5F5);
+  // ---------------------------------------------------------------------------
+  //  Ana (Primary) renk (#756EF3) ve türetilmiş sabit renk değerleri
+  // ---------------------------------------------------------------------------
+  static const Color kPrimaryColor = Color(0xFF756EF3);
+  static const Color kSecondaryColor = Color(0xFFAAA6FB);
 
-  // Text Colors
-  static const Color kTitleColor = Color(0xFF002055);
-  static const Color kTextColor = Color(0xFF00091F);
-  static const Color kStrokeColor = Color(0xFF868D95);
+  // Açık ton (background, scaffold)
+  static const Color kBackgroundColor = Color(0xFFF2F1FE);
+  static const Color kScaffoldColor = Color(0xFFF2F1FE);
 
-  // Semantic Colors
-  static const Color kErrorColor = Color(0xFFF9637C); // Red
-  static const Color kSuccessColor = Color(0xFF26C586); // Light Green
-  static const Color kWarningColor = Color(0xFFFBB453); // Orange
-  static const Color kInfoColor = Color(0xFF185BFF); // Blue
+  // Yazı ve başlık renkleri
+  static const Color kTitleColor = Color(0xFF3A36A8);
+  static const Color kTextColor = Color(0xFF4D49C1);
 
-  // Additional Colors
-  static const Color kLightGreyColor = Color(0xFF828282);
+  // Koyu gri ya da siyah ton (projede varsa)
   static const Color kDarkGreyColor = Color(0xFF333333);
-  static const Color kLightGreenColor = Color(0xFF26C586);
-  static const Color kDarkGreenColor = Color(0xFF229064);
-  static const Color kOrangeColor = Color(0xFFFBB453);
-  static const Color kYellowColor = Color(0xFFF0B704);
-  static const Color kPurpleColor = Color(0xFF925BFE);
-  static const Color kDarkPurpleColor = Color(0xFF756EF3);
-  static const Color kIconColor = Color(0xFF000000);
-  static const Color kShadowColor = Color(0xFF000000);
-  static const Color kBlackColor = Color(0xFF000000);
+
+  // Beyaz renk (genelde sabit)
   static const Color kWhiteColor = Color(0xFFFFFFFF);
 
-  // Dark Mode Support
-  static var dark = _DarkColors();
-  static var light = _LightColors();
+  // Semantic renklere örnek (mor tonlu error isterseniz bu şekilde tanımlanabilir)
+  // İsterseniz buraları kırmızı/yeşil gibi klasik error-success renklerine çevirebilirsiniz.
+  static const Color kErrorColor = Color(0xFF5C56D2);
+  static const Color kSuccessColor = Color(0xFFAAA6FB);
+  static const Color kWarningColor = Color(0xFF928EF9);
+  static const Color kInfoColor = Color(0xFFC5C2FC);
 
-  // Material Color Palette for Primary Color
-  static const MaterialColor kPrimarySwatch = MaterialColor(
-    0xFF925BFE,
-    <int, Color>{
-      50: Color(0xFFEDE3FF),
-      100: Color(0xFFD1BFFF),
-      200: Color(0xFFB499FF),
-      300: Color(0xFF976FFF),
-      400: Color(0xFF864FFF),
-      500: Color(0xFF7530FE),
-      600: Color(0xFF6B2AFD),
-      700: Color(0xFF5F22FD),
-      800: Color(0xFF531AFD),
-      900: Color(0xFF3F0DFD),
-    },
-  );
+  // Ek örnekler (size göre renklendirme)
+  static const Color kStrokeColor = Color(0xFFC5C2FC);
+  static const Color kLightGreyColor = Color(0xFFF2F1FE);
+  static const Color kIconColor = Color(0xFF3A36A8);
+  static const Color kShadowColor = Color(0xFF4D49C1);
+  static const Color kBlackColor = Color(0xFF000000);
+
+  // ---------------------------------------------------------------------------
+  //  Koyu & Açık mod için alt sınıflar (final - runtime values).
+  //  İsterseniz bunları da doğrudan "const" yapabilirsiniz ama
+  //  index operatörü kullanmadığımız için problem çıkmayacaktır.
+  // ---------------------------------------------------------------------------
+  static final _DarkColors dark = _DarkColors();
+  static final _LightColors light = _LightColors();
 }
 
-// Dark Mode Colors
+// Dark Mode renklerini tanımlayan alt sınıf
 class _DarkColors {
-  final Color background = Color(0xFF0A1931);
-  final Color text = Color(0xFFF0F5F5);
-  final Color primary = Color(0xFF756EF3);
-  final Color secondary = Color(0xFF925BFE);
-  final Color error = Color(0xFFF9637C);
-  final Color success = Color(0xFF26C586);
+  final Color background = const Color(0xFF3A36A8);
+  final Color text = const Color(0xFFF2F1FE);
+  final Color primary = const Color(0xFF928EF9);
+  final Color secondary = const Color(0xFFC5C2FC);
+  final Color error = const Color(0xFF5C56D2);
+  final Color success = const Color(0xFFAAA6FB);
 }
 
-// Light Mode Colors
+// Light Mode renklerini tanımlayan alt sınıf
 class _LightColors {
-  final Color background = Color(0xFFF0F5F5);
-  final Color text = Color(0xFF00091F);
-  final Color primary = Color(0xFF925BFE);
-  final Color secondary = Color(0xFF756EF3);
-  final Color error = Color(0xFFF9637C);
-  final Color success = Color(0xFF26C586);
+  final Color background = AppColors.kBackgroundColor;
+  final Color text = AppColors.kTextColor;
+  final Color primary = AppColors.kPrimaryColor;
+  final Color secondary = AppColors.kSecondaryColor;
+  final Color error = AppColors.kErrorColor;
+  final Color success = AppColors.kSuccessColor;
 }
