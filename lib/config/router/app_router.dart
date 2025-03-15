@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../features/ydsWords/presentation/views/home.dart';
+import '../../features/ydsWords/presentation/views/word_learning_view.dart';
 import 'route_names.dart';
 
 /// A convenient router class to handle named routes with various custom animations.
@@ -15,6 +16,12 @@ class AppRouter {
         return fadeRoute(
           settings: settings,
           view: Home(),
+        );
+
+      case RouteNames.wordLearningView:
+        return slideRoute(
+          settings: settings,
+          view: WordLearningView(),
         );
 
       // If no matching route is found, return an error page.
