@@ -12,7 +12,7 @@ class AppColors {
   static const Color kSecondaryColor = Color(0xFFAAA6FB);
 
   // Açık ton (background, scaffold)
-  static const Color kBackgroundColor = Color(0xFFF2F1FE);
+  static const Color kBackgroundColor = Color(0xFFFEFEFE);
   static const Color kScaffoldColor = Color(0xFFF2F1FE);
 
   // Yazı ve başlık renkleri
