@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../features/ydsWords/presentation/views/home.dart';
 import 'route_names.dart';
 
 /// A convenient router class to handle named routes with various custom animations.
@@ -13,7 +14,7 @@ class AppRouter {
       case RouteNames.home:
         return fadeRoute(
           settings: settings,
-          view: Container(),
+          view: Home(),
         );
 
       // If no matching route is found, return an error page.
