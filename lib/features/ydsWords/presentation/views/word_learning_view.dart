@@ -24,7 +24,7 @@ class WordLearningView extends StatelessWidget {
               return Column(
                 children: [
                   AspectRatio(
-                    aspectRatio: 16 / 9,
+                    aspectRatio: 14 / 9,
                     child: Container(
                       decoration: BoxDecoration(
                         color: AppColors.kPrimaryColor,
@@ -88,7 +88,7 @@ class WordLearningView extends StatelessWidget {
                                   currentWord.translation,
                                   style: context.textTheme.bodyLarge?.copyWith(
                                     color: Colors.white,
-                                    fontWeight: FontWeight.bold,
+                                    fontWeight: FontWeight.w400,
                                   ),
                                 ),
                               ],
@@ -100,8 +100,76 @@ class WordLearningView extends StatelessWidget {
                   ),
                   Padding(
                     padding: context.paddingVerticalDefault,
+                    child: AspectRatio(
+                      aspectRatio: 14 / 9,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: AppColors.kSecondaryColor,
+                          borderRadius: BorderRadius.circular(16),
+                        ),
+                        child: Padding(
+                          padding: context.paddingLow,
+                          child: Stack(
+                            children: [
+                              Align(
+                                alignment: Alignment.topRight,
+                                child: IconButton(
+                                  icon: Container(
+                                    decoration: BoxDecoration(
+                                      shape: BoxShape.circle,
+                                      color: Colors.transparent,
+                                      border: Border.all(color: Colors.white),
+                                    ),
+                                    padding: context.paddingLow,
+                                    child: const Icon(
+                                      Icons.volume_up,
+                                      color: Colors.white,
+                                    ),
+                                  ),
+                                  onPressed: () {
+                                    context.read<WordLearningBloc>().add(
+                                        SpeakWord(currentWord,
+                                            isExample: true));
+                                  },
+                                ),
+                              ),
+                              Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                children: [
+                                  Text(
+                                    currentWord.exampleSentence,
+                                    style:
+                                        context.textTheme.bodyLarge?.copyWith(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  const Divider(
+                                    color: Colors.white,
+                                    thickness: 2,
+                                  ),
+                                  Text(
+                                    currentWord.exampleTranslation,
+                                    style:
+                                        context.textTheme.bodyLarge?.copyWith(
+                                      color: Colors.white,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: context.paddingVerticalDefault,
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         if (state.currentWordIndex > 0)
                           ElevatedButton(
