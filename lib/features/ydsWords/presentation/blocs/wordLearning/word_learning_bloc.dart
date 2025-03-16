@@ -146,7 +146,11 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
         words: state.words,
         learnedWords: state.learnedWords,
         filteredLearnedWords: state.filteredLearnedWords));
-    final result = await _speakWordUsecase.call(params: event.word.word);
+    String? params = event.word.word;
+    if (event.isExample) {
+      params = event.word.exampleSentence;
+    }
+    final result = await _speakWordUsecase.call(params: params);
     if (result is DataSuccess) {
       if (state is WordLearningLoaded) {
         emit(WordLearningLoaded(

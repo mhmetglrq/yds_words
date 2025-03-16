@@ -29,7 +29,8 @@ class DeleteAllLearnedWords extends WordLearningEvent {}
 
 class SpeakWord extends WordLearningEvent {
   final WordEntity word;
-  const SpeakWord(this.word);
+  final bool isExample;
+  const SpeakWord(this.word, {this.isExample = false});
   @override
   List<Object> get props => [word];
 }

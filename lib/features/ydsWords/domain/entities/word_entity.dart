@@ -11,11 +11,18 @@ abstract class WordEntity {
   final String translation;
   @HiveField(3)
   final String type;
+  @HiveField(4)
+  final String exampleSentence;
+  @HiveField(5)
+  final String exampleTranslation;
+
 
   WordEntity({
     required this.id,
     required this.word,
     required this.translation,
     required this.type,
+    required this.exampleSentence,
+    required this.exampleTranslation,
   });
 }
