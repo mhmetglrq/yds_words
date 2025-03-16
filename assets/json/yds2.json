@@ -1,0 +1,4182 @@
+[
+    {
+        "word": "Abandon",
+        "translation": "Terk etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Abbreviate",
+        "translation": "Kısaltmak, özetlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Abolish",
+        "translation": "Feshetmek, bozmak, son vermek",
+        "type": "verb"
+    },
+    {
+        "word": "Absorb",
+        "translation": "Emmek, içine çekmek",
+        "type": "verb"
+    },
+    {
+        "word": "Abstain",
+        "translation": "Kaçınmak, çekimser kalmak",
+        "type": "verb"
+    },
+    {
+        "word": "Accelerate",
+        "translation": "Hızlandırmak, ivme kazandırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Accessible",
+        "translation": "Erişilebilir, ulaşılabilir",
+        "type": "adjective"
+    },
+    {
+        "word": "Accomplish",
+        "translation": "Başarmak, tamamlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Accumulate",
+        "translation": "Birikmek, toplamak",
+        "type": "verb"
+    },
+    {
+        "word": "Accurate",
+        "translation": "Doğru, kesin",
+        "type": "adjective"
+    },
+    {
+        "word": "Accuse",
+        "translation": "Suçlamak, itham etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Achieve",
+        "translation": "Başarmak, elde etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Acknowledge",
+        "translation": "Kabul etmek, tanımak",
+        "type": "verb"
+    },
+    {
+        "word": "Acquire",
+        "translation": "Edinmek, kazanmak",
+        "type": "verb"
+    },
+    {
+        "word": "Adapt",
+        "translation": "Uyarlamak, uyum sağlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Adequate",
+        "translation": "Yeterli, uygun",
+        "type": "adjective"
+    },
+    {
+        "word": "Adjust",
+        "translation": "Ayarlamak, düzeltmek",
+        "type": "verb"
+    },
+    {
+        "word": "Administer",
+        "translation": "Yönetmek, idare etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Admire",
+        "translation": "Hayran olmak, beğenmek",
+        "type": "verb"
+    },
+    {
+        "word": "Admit",
+        "translation": "Kabul etmek, itiraf etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Adopt",
+        "translation": "Benimsemek, evlat edinmek",
+        "type": "verb"
+    },
+    {
+        "word": "Adverse",
+        "translation": "Olumsuz, ters",
+        "type": "adjective"
+    },
+    {
+        "word": "Advocate",
+        "translation": "Savunmak, desteklemek",
+        "type": "verb"
+    },
+    {
+        "word": "Affect",
+        "translation": "Etkilemek",
+        "type": "verb"
+    },
+    {
+        "word": "Afford",
+        "translation": "Gücü yetmek, karşılamak",
+        "type": "verb"
+    },
+    {
+        "word": "Aggressive",
+        "translation": "Saldırgan, agresif",
+        "type": "adjective"
+    },
+    {
+        "word": "Aid",
+        "translation": "Yardım etmek, desteklemek",
+        "type": "verb"
+    },
+    {
+        "word": "Allocate",
+        "translation": "Tahsis etmek, ayırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Alter",
+        "translation": "Değiştirmek, değişmek",
+        "type": "verb"
+    },
+    {
+        "word": "Alternative",
+        "translation": "Alternatif, seçenek",
+        "type": "noun"
+    },
+    {
+        "word": "Amend",
+        "translation": "Düzeltmek, değiştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Analyze",
+        "translation": "Analiz etmek, çözümlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Ancient",
+        "translation": "Antik, eski",
+        "type": "adjective"
+    },
+    {
+        "word": "Announce",
+        "translation": "Duyurmak, ilan etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Anticipate",
+        "translation": "Beklemek, ummak",
+        "type": "verb"
+    },
+    {
+        "word": "Anxiety",
+        "translation": "Endişe, kaygı",
+        "type": "noun"
+    },
+    {
+        "word": "Apologize",
+        "translation": "Özür dilemek",
+        "type": "verb"
+    },
+    {
+        "word": "Apparent",
+        "translation": "Açık, belli",
+        "type": "adjective"
+    },
+    {
+        "word": "Appeal",
+        "translation": "Başvurmak, cazibe",
+        "type": "verb"
+    },
+    {
+        "word": "Appear",
+        "translation": "Görünmek, ortaya çıkmak",
+        "type": "verb"
+    },
+    {
+        "word": "Appoint",
+        "translation": "Atamak, tayin etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Appreciate",
+        "translation": "Takdir etmek, değerini bilmek",
+        "type": "verb"
+    },
+    {
+        "word": "Approach",
+        "translation": "Yaklaşmak, yaklaşım",
+        "type": "noun"
+    },
+    {
+        "word": "Appropriate",
+        "translation": "Uygun, yerinde",
+        "type": "adjective"
+    },
+    {
+        "word": "Approve",
+        "translation": "Onaylamak, kabul etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Argue",
+        "translation": "Tartışmak, savunmak",
+        "type": "verb"
+    },
+    {
+        "word": "Arise",
+        "translation": "Ortaya çıkmak, yükselmek",
+        "type": "verb"
+    },
+    {
+        "word": "Arrange",
+        "translation": "Düzenlemek, ayarlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Arrest",
+        "translation": "Tutuklamak, durdurmak",
+        "type": "verb"
+    },
+    {
+        "word": "Arrive",
+        "translation": "Ulaşmak, varmak",
+        "type": "verb"
+    },
+    {
+        "word": "Ascertain",
+        "translation": "Belirlemek, saptamak",
+        "type": "verb"
+    },
+    {
+        "word": "Aspire",
+        "translation": "Arzulamak, istemek",
+        "type": "verb"
+    },
+    {
+        "word": "Assemble",
+        "translation": "Toplamak, birleştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Assert",
+        "translation": "İddia etmek, ileri sürmek",
+        "type": "verb"
+    },
+    {
+        "word": "Assess",
+        "translation": "Değerlendirmek, belirlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Assign",
+        "translation": "Atamak, görevlendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Assist",
+        "translation": "Yardım etmek, desteklemek",
+        "type": "verb"
+    },
+    {
+        "word": "Associate",
+        "translation": "İlişkilendirmek, bağdaştırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Assume",
+        "translation": "Varsaymak, üstlenmek",
+        "type": "verb"
+    },
+    {
+        "word": "Assure",
+        "translation": "Garanti etmek, temin etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Attach",
+        "translation": "Eklemek, iliştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Attain",
+        "translation": "Elde etmek, ulaşmak",
+        "type": "verb"
+    },
+    {
+        "word": "Attempt",
+        "translation": "Teşebbüs etmek, girişimde bulunmak",
+        "type": "verb"
+    },
+    {
+        "word": "Attend",
+        "translation": "Katılmak, iştirak etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Attitude",
+        "translation": "Tutum, tavır",
+        "type": "noun"
+    },
+    {
+        "word": "Attract",
+        "translation": "Çekmek, cezbetmek",
+        "type": "verb"
+    },
+    {
+        "word": "Attribute",
+        "translation": "Bağlamak, atfetmek",
+        "type": "verb"
+    },
+    {
+        "word": "Authorize",
+        "translation": "Yetki vermek",
+        "type": "verb"
+    },
+    {
+        "word": "Avail",
+        "translation": "Yarar sağlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Avert",
+        "translation": "Önlemek, engellemek",
+        "type": "verb"
+    },
+    {
+        "word": "Avoid",
+        "translation": "Kaçınmak, sakınmak",
+        "type": "verb"
+    },
+    {
+        "word": "Await",
+        "translation": "Beklemek",
+        "type": "verb"
+    },
+    {
+        "word": "Awareness",
+        "translation": "Farkındalık",
+        "type": "noun"
+    },
+    {
+        "word": "Backfire",
+        "translation": "Ters tepki yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Balance",
+        "translation": "Denge",
+        "type": "noun"
+    },
+    {
+        "word": "Ban",
+        "translation": "Yasaklamak",
+        "type": "verb"
+    },
+    {
+        "word": "Barely",
+        "translation": "Zar zor, güçlükle",
+        "type": "adverb"
+    },
+    {
+        "word": "Bargain",
+        "translation": "Pazarlık yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Base",
+        "translation": "Dayandırmak, temel almak",
+        "type": "verb"
+    },
+    {
+        "word": "Bear",
+        "translation": "Katlanmak, dayanmak",
+        "type": "verb"
+    },
+    {
+        "word": "Belief",
+        "translation": "İnanç",
+        "type": "noun"
+    },
+    {
+        "word": "Belong",
+        "translation": "Ait olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Benefit",
+        "translation": "Fayda sağlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Bias",
+        "translation": "Önyargı",
+        "type": "noun"
+    },
+    {
+        "word": "Bind",
+        "translation": "Bağlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Blame",
+        "translation": "Suçlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Boast",
+        "translation": "Övünmek, böbürlenmek",
+        "type": "verb"
+    },
+    {
+        "word": "Boost",
+        "translation": "Artırmak, yükseltmek",
+        "type": "verb"
+    },
+    {
+        "word": "Borrow",
+        "translation": "Ödünç almak",
+        "type": "verb"
+    },
+    {
+        "word": "Bound",
+        "translation": "Bağlı, zorunlu",
+        "type": "adjective"
+    },
+    {
+        "word": "Breed",
+        "translation": "Üretmek, yetiştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Brief",
+        "translation": "Kısa, öz",
+        "type": "adjective"
+    },
+    {
+        "word": "Brilliant",
+        "translation": "Parlak, zeki",
+        "type": "adjective"
+    },
+    {
+        "word": "Broad",
+        "translation": "Geniş",
+        "type": "adjective"
+    },
+    {
+        "word": "Budget",
+        "translation": "Bütçe",
+        "type": "noun"
+    },
+    {
+        "word": "Burden",
+        "translation": "Yük, sorumluluk",
+        "type": "noun"
+    },
+    {
+        "word": "Calculate",
+        "translation": "Hesaplamak",
+        "type": "verb"
+    },
+    {
+        "word": "Capable",
+        "translation": "Yetenekli, yapabilir",
+        "type": "adjective"
+    },
+    {
+        "word": "Capacity",
+        "translation": "Kapasite",
+        "type": "noun"
+    },
+    {
+        "word": "Captypee",
+        "translation": "Ele geçirmek, yakalamak",
+        "type": "verb"
+    },
+    {
+        "word": "Care",
+        "translation": "İlgi, bakım",
+        "type": "noun"
+    },
+    {
+        "word": "Cease",
+        "translation": "Durmak, sona ermek",
+        "type": "verb"
+    },
+    {
+        "word": "Challenge",
+        "translation": "Meydan okumak, zorluk",
+        "type": "noun"
+    },
+    {
+        "word": "Change",
+        "translation": "Değiştirmek, değişim",
+        "type": "verb"
+    },
+    {
+        "word": "Characterize",
+        "translation": "Tanımlamak, nitelemek",
+        "type": "verb"
+    },
+    {
+        "word": "Charge",
+        "translation": "Ücretlendirmek, suçlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Charity",
+        "translation": "Hayır kurumu, bağış",
+        "type": "noun"
+    },
+    {
+        "word": "Cheat",
+        "translation": "Aldatmak, kopya çekmek",
+        "type": "verb"
+    },
+    {
+        "word": "Check",
+        "translation": "Kontrol etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Cherish",
+        "translation": "Değer vermek, sevgiyle anmak",
+        "type": "verb"
+    },
+    {
+        "word": "Choice",
+        "translation": "Seçim, seçenek",
+        "type": "noun"
+    },
+    {
+        "word": "Circumstance",
+        "translation": "Durum, koşul",
+        "type": "noun"
+    },
+    {
+        "word": "Claim",
+        "translation": "İddia etmek, talep etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Clarify",
+        "translation": "Açıklamak, netleştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Classify",
+        "translation": "Sınıflandırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Client",
+        "translation": "Müşteri",
+        "type": "noun"
+    },
+    {
+        "word": "Cooperate",
+        "translation": "İş birliği yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Cope",
+        "translation": "Başa çıkmak",
+        "type": "verb"
+    },
+    {
+        "word": "Correspond",
+        "translation": "Karşılık gelmek, yazışmak",
+        "type": "verb"
+    },
+    {
+        "word": "Corrupt",
+        "translation": "Bozmak, yolsuzluk yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Cost",
+        "translation": "Maliyet, tutar",
+        "type": "noun"
+    },
+    {
+        "word": "Counter",
+        "translation": "Karşı koymak, tezgah",
+        "type": "noun"
+    },
+    {
+        "word": "Create",
+        "translation": "Yaratmak, oluştypemak",
+        "type": "verb"
+    },
+    {
+        "word": "Criticize",
+        "translation": "Eleştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Crucial",
+        "translation": "Hayati, çok önemli",
+        "type": "adjective"
+    },
+    {
+        "word": "Cure",
+        "translation": "Tedavi etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Curious",
+        "translation": "Meraklı",
+        "type": "adjective"
+    },
+    {
+        "word": "Current",
+        "translation": "Güncel, akım",
+        "type": "adjective"
+    },
+    {
+        "word": "Dare",
+        "translation": "Meydan okumak, cesaret etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Debate",
+        "translation": "Tartışmak, münazara",
+        "type": "verb"
+    },
+    {
+        "word": "Decay",
+        "translation": "Çürümek, bozulmak",
+        "type": "verb"
+    },
+    {
+        "word": "Deceive",
+        "translation": "Aldatmak, kandırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Declare",
+        "translation": "Beyan etmek, ilan etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Decline",
+        "translation": "Reddetmek, düşüş",
+        "type": "verb"
+    },
+    {
+        "word": "Decrease",
+        "translation": "Azaltmak, düşüş",
+        "type": "verb"
+    },
+    {
+        "word": "Dedicate",
+        "translation": "Adamak, ithaf etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Defend",
+        "translation": "Savunmak",
+        "type": "verb"
+    },
+    {
+        "word": "Define",
+        "translation": "Tanımlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Delay",
+        "translation": "Geciktirmek, ertelemek",
+        "type": "verb"
+    },
+    {
+        "word": "Deliberate",
+        "translation": "Kasti, düşünerek yapılmış",
+        "type": "adjective"
+    },
+    {
+        "word": "Deny",
+        "translation": "İnkar etmek, reddetmek",
+        "type": "verb"
+    },
+    {
+        "word": "Depict",
+        "translation": "Tasvir etmek, betimlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Deprive",
+        "translation": "Mahrum bırakmak",
+        "type": "verb"
+    },
+    {
+        "word": "Derive",
+        "translation": "Türetmek, çıkarmak",
+        "type": "verb"
+    },
+    {
+        "word": "Deserve",
+        "translation": "Hak etmek, layık olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Designate",
+        "translation": "Belirlemek, atamak",
+        "type": "verb"
+    },
+    {
+        "word": "Desire",
+        "translation": "Arzulamak, istemek",
+        "type": "verb"
+    },
+    {
+        "word": "Despair",
+        "translation": "Umutsuzluk, çaresizlik",
+        "type": "noun"
+    },
+    {
+        "word": "Destructive",
+        "translation": "Yıkıcı, tahrip edici",
+        "type": "adjective"
+    },
+    {
+        "word": "Detect",
+        "translation": "Tespit etmek, fark etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Determine",
+        "translation": "Belirlemek, saptamak",
+        "type": "verb"
+    },
+    {
+        "word": "Devastate",
+        "translation": "Harap etmek, mahvetmek",
+        "type": "verb"
+    },
+    {
+        "word": "Develop",
+        "translation": "Geliştirmek, gelişmek",
+        "type": "verb"
+    },
+    {
+        "word": "Devise",
+        "translation": "Tasarımını yapmak, icat etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Diagnose",
+        "translation": "Teşhis koymak",
+        "type": "verb"
+    },
+    {
+        "word": "Dictate",
+        "translation": "Zorla kabul ettirmek, dikte etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Differ",
+        "translation": "Farklı olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Digest",
+        "translation": "Sindirmek, özümsemek",
+        "type": "verb"
+    },
+    {
+        "word": "Diminish",
+        "translation": "Azaltmak, eksiltmek",
+        "type": "verb"
+    },
+    {
+        "word": "Disagree",
+        "translation": "Aynı fikirde olmamak",
+        "type": "verb"
+    },
+    {
+        "word": "Disappear",
+        "translation": "Gözden kaybolmak",
+        "type": "verb"
+    },
+    {
+        "word": "Disappoint",
+        "translation": "Hayal kırıklığına uğratmak",
+        "type": "verb"
+    },
+    {
+        "word": "Disaster",
+        "translation": "Felaket, afet",
+        "type": "noun"
+    },
+    {
+        "word": "Disclose",
+        "translation": "Açığa çıkarmak",
+        "type": "verb"
+    },
+    {
+        "word": "Discourage",
+        "translation": "Cesaretini kırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Discover",
+        "translation": "Keşfetmek",
+        "type": "verb"
+    },
+    {
+        "word": "Discriminate",
+        "translation": "Ayrımcılık yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Discuss",
+        "translation": "Tartışmak, görüşmek",
+        "type": "verb"
+    },
+    {
+        "word": "Disguise",
+        "translation": "Kılık değiştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Disgust",
+        "translation": "Tiksindirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Dishonest",
+        "translation": "Dürüst olmayan",
+        "type": "adjective"
+    },
+    {
+        "word": "Dismiss",
+        "translation": "İşten çıkarmak, reddetmek",
+        "type": "verb"
+    },
+    {
+        "word": "Disperse",
+        "translation": "Dağıtmak, yaymak",
+        "type": "verb"
+    },
+    {
+        "word": "Display",
+        "translation": "Sergilemek, göstermek",
+        "type": "verb"
+    },
+    {
+        "word": "Dispose",
+        "translation": "Elden çıkarmak, düzenlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Disrupt",
+        "translation": "Bozmak, aksatmak",
+        "type": "verb"
+    },
+    {
+        "word": "Distant",
+        "translation": "Uzak",
+        "type": "adjective"
+    },
+    {
+        "word": "Distinct",
+        "translation": "Farklı, belirgin",
+        "type": "adjective"
+    },
+    {
+        "word": "Distinguish",
+        "translation": "Ayırt etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Distort",
+        "translation": "Çarpıtmak, bozmak",
+        "type": "verb"
+    },
+    {
+        "word": "Distract",
+        "translation": "Dikkatini dağıtmak",
+        "type": "verb"
+    },
+    {
+        "word": "Distress",
+        "translation": "Sıkıntı, acı",
+        "type": "noun"
+    },
+    {
+        "word": "Distribute",
+        "translation": "Dağıtmak",
+        "type": "verb"
+    },
+    {
+        "word": "Distypeb",
+        "translation": "Rahatsız etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Diverse",
+        "translation": "Çeşitli",
+        "type": "adjective"
+    },
+    {
+        "word": "Divert",
+        "translation": "Yönünü değiştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Divide",
+        "translation": "Bölmek, ayırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Document",
+        "translation": "Belgelendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Domestic",
+        "translation": "Evcil, yerli",
+        "type": "adjective"
+    },
+    {
+        "word": "Dominate",
+        "translation": "Hakim olmak, egemen olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Donate",
+        "translation": "Bağış yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Doubt",
+        "translation": "Şüphe, kuşku",
+        "type": "noun"
+    },
+    {
+        "word": "Downward",
+        "translation": "Aşağıya doğru",
+        "type": "adjective"
+    },
+    {
+        "word": "Draft",
+        "translation": "Taslak, müsvedde",
+        "type": "noun"
+    },
+    {
+        "word": "Drag",
+        "translation": "Sürüklemek",
+        "type": "verb"
+    },
+    {
+        "word": "Drain",
+        "translation": "Boşaltmak, suyunu çekmek",
+        "type": "verb"
+    },
+    {
+        "word": "Drastic",
+        "translation": "Sert, ani, köklü",
+        "type": "adjective"
+    },
+    {
+        "word": "Dread",
+        "translation": "Korkmak, dehşete düşmek",
+        "type": "verb"
+    },
+    {
+        "word": "Drift",
+        "translation": "Sürüklenmek",
+        "type": "verb"
+    },
+    {
+        "word": "Drown",
+        "translation": "Boğulmak, boğmak",
+        "type": "verb"
+    },
+    {
+        "word": "Due",
+        "translation": "Beklenen, vadesi dolmuş",
+        "type": "adjective"
+    },
+    {
+        "word": "Dull",
+        "translation": "Sıkıcı, donuk",
+        "type": "adjective"
+    },
+    {
+        "word": "Duplicate",
+        "translation": "Kopyalamak, çoğaltmak",
+        "type": "verb"
+    },
+    {
+        "word": "Durable",
+        "translation": "Dayanıklı, uzun ömürlü",
+        "type": "adjective"
+    },
+    {
+        "word": "Dwell",
+        "translation": "İkamet etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Dynamic",
+        "translation": "Dinamik, hareketli",
+        "type": "adjective"
+    },
+    {
+        "word": "Ease",
+        "translation": "Rahatlatmak, kolaylaştırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Echo",
+        "translation": "Yankılanmak, tekrarlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Economic",
+        "translation": "Ekonomik, iktisadi",
+        "type": "adjective"
+    },
+    {
+        "word": "Ecosystem",
+        "translation": "Ekosistem",
+        "type": "noun"
+    },
+    {
+        "word": "Edit",
+        "translation": "Düzenlemek, revize etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Efficient",
+        "translation": "Verimli, etkili",
+        "type": "adjective"
+    },
+    {
+        "word": "Effort",
+        "translation": "Çaba, gayret",
+        "type": "noun"
+    },
+    {
+        "word": "Elaborate",
+        "translation": "Ayrıntılı, detaylı",
+        "type": "adjective"
+    },
+    {
+        "word": "Eliminate",
+        "translation": "Elemek, ortadan kaldırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Embark",
+        "translation": "Başlamak, girişmek",
+        "type": "verb"
+    },
+    {
+        "word": "Embody",
+        "translation": "Temsil etmek, simgelemek",
+        "type": "verb"
+    },
+    {
+        "word": "Embrace",
+        "translation": "Kucaklamak, benimsemek",
+        "type": "verb"
+    },
+    {
+        "word": "Emerge",
+        "translation": "Ortaya çıkmak, belirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Emit",
+        "translation": "Yaymak, çıkarmak (ışık, ses vb.)",
+        "type": "verb"
+    },
+    {
+        "word": "Emphasize",
+        "translation": "Vurgulamak, altını çizmek",
+        "type": "verb"
+    },
+    {
+        "word": "Employ",
+        "translation": "İş vermek, kullanmak",
+        "type": "verb"
+    },
+    {
+        "word": "Empower",
+        "translation": "Yetki vermek, güçlendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Enable",
+        "translation": "Mümkün kılmak, etkinleştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Enclose",
+        "translation": "Çevrelemek, eklemek",
+        "type": "verb"
+    },
+    {
+        "word": "Encounter",
+        "translation": "Karşılaşmak",
+        "type": "verb"
+    },
+    {
+        "word": "Encourage",
+        "translation": "Cesaretlendirmek, teşvik etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Endanger",
+        "translation": "Tehlikeye atmak",
+        "type": "verb"
+    },
+    {
+        "word": "Endeavor",
+        "translation": "Çabalamak, gayret göstermek",
+        "type": "verb"
+    },
+    {
+        "word": "Endorse",
+        "translation": "Onaylamak, desteklemek",
+        "type": "verb"
+    },
+    {
+        "word": "Endure",
+        "translation": "Dayanmak, katlanmak",
+        "type": "verb"
+    },
+    {
+        "word": "Enforce",
+        "translation": "Uygulamak, zorla kabul ettirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Engage",
+        "translation": "Meşgul olmak, ilgilenmek",
+        "type": "verb"
+    },
+    {
+        "word": "Enhance",
+        "translation": "Geliştirmek, artırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Enlarge",
+        "translation": "Büyütmek, genişletmek",
+        "type": "verb"
+    },
+    {
+        "word": "Enrich",
+        "translation": "Zenginleştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Ensure",
+        "translation": "Sağlamak, garanti etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Entertain",
+        "translation": "Eğlendirmek, ağırlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Entire",
+        "translation": "Bütün, tam",
+        "type": "adjective"
+    },
+    {
+        "word": "Envious",
+        "translation": "Kıskanç, gıpta eden",
+        "type": "adjective"
+    },
+    {
+        "word": "Equate",
+        "translation": "Eşitlemek, eşit tutmak",
+        "type": "verb"
+    },
+    {
+        "word": "Equip",
+        "translation": "Donatmak, teçhiz etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Equivalent",
+        "translation": "Eşdeğer, denk",
+        "type": "adjective"
+    },
+    {
+        "word": "Eradicate",
+        "translation": "Kökünü kazımak, yok etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Erode",
+        "translation": "Aşındırmak, erozyona uğratmak",
+        "type": "verb"
+    },
+    {
+        "word": "Err",
+        "translation": "Hata yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Essential",
+        "translation": "Temel, gerekli",
+        "type": "adjective"
+    },
+    {
+        "word": "Establish",
+        "translation": "Kurmak, tesis etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Estimate",
+        "translation": "Tahmin etmek, hesaplamak",
+        "type": "verb"
+    },
+    {
+        "word": "Evaluate",
+        "translation": "Değerlendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Evaporate",
+        "translation": "Buharlaşmak",
+        "type": "verb"
+    },
+    {
+        "word": "Evasion",
+        "translation": "Kaçınma, sakınma",
+        "type": "noun"
+    },
+    {
+        "word": "Evident",
+        "translation": "Açık, belirgin",
+        "type": "adjective"
+    },
+    {
+        "word": "Evolve",
+        "translation": "Evrim geçirmek, gelişmek",
+        "type": "verb"
+    },
+    {
+        "word": "Exaggerate",
+        "translation": "Abartmak",
+        "type": "verb"
+    },
+    {
+        "word": "Exceed",
+        "translation": "Aşmak, geçmek",
+        "type": "verb"
+    },
+    {
+        "word": "Excel",
+        "translation": "Üstün olmak, mükemmel olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Exception",
+        "translation": "İstisna",
+        "type": "noun"
+    },
+    {
+        "word": "Exclude",
+        "translation": "Hariç tutmak, dışlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Excuse",
+        "translation": "Mazeret, bahane",
+        "type": "noun"
+    },
+    {
+        "word": "Execute",
+        "translation": "İdam etmek, gerçekleştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Exempt",
+        "translation": "Muaf, hariç",
+        "type": "adjective"
+    },
+    {
+        "word": "Exercise",
+        "translation": "Egzersiz yapmak, uygulamak",
+        "type": "verb"
+    },
+    {
+        "word": "Exert",
+        "translation": "Çaba sarf etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Exhaust",
+        "translation": "Tüketmek, bitirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Exhibit",
+        "translation": "Sergilemek, göstermek",
+        "type": "verb"
+    },
+    {
+        "word": "Exile",
+        "translation": "Sürgün",
+        "type": "noun"
+    },
+    {
+        "word": "Expand",
+        "translation": "Genişletmek, büyütmek",
+        "type": "verb"
+    },
+    {
+        "word": "Expect",
+        "translation": "Beklemek, ummak",
+        "type": "verb"
+    },
+    {
+        "word": "Expedite",
+        "translation": "Hızlandırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Expenditypee",
+        "translation": "Gider, harcama",
+        "type": "noun"
+    },
+    {
+        "word": "Experiment",
+        "translation": "Deney yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Expertise",
+        "translation": "Uzmanlık, beceri",
+        "type": "noun"
+    },
+    {
+        "word": "Expire",
+        "translation": "Süresi dolmak, sona ermek",
+        "type": "verb"
+    },
+    {
+        "word": "Explain",
+        "translation": "Açıklamak",
+        "type": "verb"
+    },
+    {
+        "word": "Exploit",
+        "translation": "Sömürmek, faydalanmak",
+        "type": "verb"
+    },
+    {
+        "word": "Explore",
+        "translation": "Keşfetmek, araştırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Expose",
+        "translation": "Maruz bırakmak, açığa çıkarmak",
+        "type": "verb"
+    },
+    {
+        "word": "Express",
+        "translation": "İfade etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Extend",
+        "translation": "Genişletmek, uzatmak",
+        "type": "verb"
+    },
+    {
+        "word": "Extensive",
+        "translation": "Kapsamlı, geniş",
+        "type": "adjective"
+    },
+    {
+        "word": "Extinct",
+        "translation": "Soyu tükenmiş",
+        "type": "adjective"
+    },
+    {
+        "word": "Extract",
+        "translation": "Çıkarmak, özünü almak",
+        "type": "verb"
+    },
+    {
+        "word": "Extrovert",
+        "translation": "Dışa dönük kişi",
+        "type": "noun"
+    },
+    {
+        "word": "Exuberant",
+        "translation": "Coşkulu, enerji dolu",
+        "type": "adjective"
+    },
+    {
+        "word": "Faint",
+        "translation": "Bayılmak, soluk",
+        "type": "verb"
+    },
+    {
+        "word": "Faithful",
+        "translation": "Sadık, güvenilir",
+        "type": "adjective"
+    },
+    {
+        "word": "Fake",
+        "translation": "Sahte, taklit",
+        "type": "adjective"
+    },
+    {
+        "word": "Fallacy",
+        "translation": "Yanılgı, yanlış inanç",
+        "type": "noun"
+    },
+    {
+        "word": "Fame",
+        "translation": "Şöhret",
+        "type": "noun"
+    },
+    {
+        "word": "Fancy",
+        "translation": "Süslü, hayal etmek",
+        "type": "adjective"
+    },
+    {
+        "word": "Fascinate",
+        "translation": "Büyülemek, hayran bırakmak",
+        "type": "verb"
+    },
+    {
+        "word": "Fatal",
+        "translation": "Ölümcül, öldürücü",
+        "type": "adjective"
+    },
+    {
+        "word": "Fatigue",
+        "translation": "Yorgunluk, bitkinlik",
+        "type": "noun"
+    },
+    {
+        "word": "Feasible",
+        "translation": "Yapılabilir, uygulanabilir",
+        "type": "adjective"
+    },
+    {
+        "word": "Featypee",
+        "translation": "Özellik, karakteristik",
+        "type": "noun"
+    },
+    {
+        "word": "Feeble",
+        "translation": "Zayıf, güçsüz",
+        "type": "adjective"
+    },
+    {
+        "word": "Fertile",
+        "translation": "Verimli, bereketli",
+        "type": "adjective"
+    },
+    {
+        "word": "Fiction",
+        "translation": "Kurgu, hayali hikaye",
+        "type": "noun"
+    },
+    {
+        "word": "Figure",
+        "translation": "Şekil, rakam",
+        "type": "noun"
+    },
+    {
+        "word": "File",
+        "translation": "Dosya, belge",
+        "type": "noun"
+    },
+    {
+        "word": "Finance",
+        "translation": "Finansman sağlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Firm",
+        "translation": "Sıkı, sağlam",
+        "type": "adjective"
+    },
+    {
+        "word": "Flatter",
+        "translation": "Övmek, pohpohlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Flexible",
+        "translation": "Esnek",
+        "type": "adjective"
+    },
+    {
+        "word": "Flourish",
+        "translation": "Gelişmek, büyümek",
+        "type": "verb"
+    },
+    {
+        "word": "Fluctuate",
+        "translation": "Dalgalanmak",
+        "type": "verb"
+    },
+    {
+        "word": "Focus",
+        "translation": "Odaklanmak",
+        "type": "verb"
+    },
+    {
+        "word": "Follow",
+        "translation": "Takip etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Foresee",
+        "translation": "Öngörmek",
+        "type": "verb"
+    },
+    {
+        "word": "Forge",
+        "translation": "Sahtecilik yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Formidable",
+        "translation": "Korkutucu, ürkütücü",
+        "type": "adjective"
+    },
+    {
+        "word": "Former",
+        "translation": "Önceki, eski",
+        "type": "adjective"
+    },
+    {
+        "word": "Foster",
+        "translation": "Teşvik etmek, büyütmek",
+        "type": "verb"
+    },
+    {
+        "word": "Fragile",
+        "translation": "Kırılgan, narin",
+        "type": "adjective"
+    },
+    {
+        "word": "Fraud",
+        "translation": "Dolandırıcılık",
+        "type": "noun"
+    },
+    {
+        "word": "Frighten",
+        "translation": "Korkutmak",
+        "type": "verb"
+    },
+    {
+        "word": "Frustrate",
+        "translation": "Sinirlendirmek, engellemek",
+        "type": "verb"
+    },
+    {
+        "word": "Fulfill",
+        "translation": "Yerine getirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Fund",
+        "translation": "Fon sağlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Fundamental",
+        "translation": "Temel, esas",
+        "type": "adjective"
+    },
+    {
+        "word": "Gain",
+        "translation": "Kazanmak, elde etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Gaze",
+        "translation": "Gözünü dikmek, bakakalmak",
+        "type": "verb"
+    },
+    {
+        "word": "Generate",
+        "translation": "Üretmek, oluştypemak",
+        "type": "verb"
+    },
+    {
+        "word": "Genuine",
+        "translation": "Gerçek, samimi",
+        "type": "adjective"
+    },
+    {
+        "word": "Giant",
+        "translation": "Dev, büyük",
+        "type": "adjective"
+    },
+    {
+        "word": "Gist",
+        "translation": "Özet, ana fikir",
+        "type": "noun"
+    },
+    {
+        "word": "Glance",
+        "translation": "Hızlıca bakmak",
+        "type": "verb"
+    },
+    {
+        "word": "Glorify",
+        "translation": "Övmek, yüceltmek",
+        "type": "verb"
+    },
+    {
+        "word": "Govern",
+        "translation": "Yönetmek",
+        "type": "verb"
+    },
+    {
+        "word": "Gradually",
+        "translation": "Kademeli olarak",
+        "type": "adverb"
+    },
+    {
+        "word": "Grant",
+        "translation": "Vermek, bağışlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Grasp",
+        "translation": "Kavramak, translationak",
+        "type": "verb"
+    },
+    {
+        "word": "Grateful",
+        "translation": "Minnettar",
+        "type": "adjective"
+    },
+    {
+        "word": "Gravitate",
+        "translation": "Çekilmek, yönelmek",
+        "type": "verb"
+    },
+    {
+        "word": "Greet",
+        "translation": "Selamlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Grief",
+        "translation": "Keder, üzüntü",
+        "type": "noun"
+    },
+    {
+        "word": "Guilty",
+        "translation": "Suçlu",
+        "type": "adjective"
+    },
+    {
+        "word": "Habit",
+        "translation": "Alışkanlık",
+        "type": "noun"
+    },
+    {
+        "word": "Handy",
+        "translation": "Kullanışlı",
+        "type": "adjective"
+    },
+    {
+        "word": "Harass",
+        "translation": "Taciz etmek, rahatsız etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Harsh",
+        "translation": "Sert, haşin",
+        "type": "adjective"
+    },
+    {
+        "word": "Hasten",
+        "translation": "Hızlandırmak, acele ettirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Hazard",
+        "translation": "Tehlike, risk",
+        "type": "noun"
+    },
+    {
+        "word": "Heal",
+        "translation": "İyileştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Hesitate",
+        "translation": "Tereddüt etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Highlight",
+        "translation": "Vurgulamak, altını çizmek",
+        "type": "verb"
+    },
+    {
+        "word": "Hinder",
+        "translation": "Engellemek",
+        "type": "verb"
+    },
+    {
+        "word": "Hire",
+        "translation": "İşe almak, kiralamak",
+        "type": "verb"
+    },
+    {
+        "word": "Honest",
+        "translation": "Dürüst, namuslu",
+        "type": "adjective"
+    },
+    {
+        "word": "Honor",
+        "translation": "Onur, şeref",
+        "type": "noun"
+    },
+    {
+        "word": "Hostile",
+        "translation": "Düşmanca",
+        "type": "adjective"
+    },
+    {
+        "word": "Humiliate",
+        "translation": "Aşağılamak, küçük düşürmek",
+        "type": "verb"
+    },
+    {
+        "word": "Hypothesis",
+        "translation": "Hipotez, varsayım",
+        "type": "noun"
+    },
+    {
+        "word": "Identify",
+        "translation": "Tanımlamak, belirlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Ignore",
+        "translation": "Görmezden gelmek",
+        "type": "verb"
+    },
+    {
+        "word": "Illustrate",
+        "translation": "Örneklemek, resimlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Imitate",
+        "translation": "Taklit etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Immediate",
+        "translation": "Acil, derhal",
+        "type": "adjective"
+    },
+    {
+        "word": "Immense",
+        "translation": "Çok büyük, muazzam",
+        "type": "adjective"
+    },
+    {
+        "word": "Impact",
+        "translation": "Etkilemek, darbe",
+        "type": "noun"
+    },
+    {
+        "word": "Impair",
+        "translation": "Zayıflatmak, bozmak",
+        "type": "verb"
+    },
+    {
+        "word": "Impart",
+        "translation": "Bildirerek paylaşmak, aktarmak",
+        "type": "verb"
+    },
+    {
+        "word": "Impatient",
+        "translation": "Sabırsız",
+        "type": "adjective"
+    },
+    {
+        "word": "Implement",
+        "translation": "Uygulamak, yerine getirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Imply",
+        "translation": "İma etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Impose",
+        "translation": "Zorla kabul ettirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Impress",
+        "translation": "Etkilemek",
+        "type": "verb"
+    },
+    {
+        "word": "Improve",
+        "translation": "Geliştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Incentive",
+        "translation": "Teşvik, özendirme",
+        "type": "noun"
+    },
+    {
+        "word": "Include",
+        "translation": "Dahil etmek, içermek",
+        "type": "verb"
+    },
+    {
+        "word": "Incorporate",
+        "translation": "Birleştirmek, dahil etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Increase",
+        "translation": "Artırmak, yükseltmek",
+        "type": "verb"
+    },
+    {
+        "word": "Indicate",
+        "translation": "Göstermek, işaret etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Indifference",
+        "translation": "İlgisizlik, kayıtsızlık",
+        "type": "noun"
+    },
+    {
+        "word": "Indigenous",
+        "translation": "Yerel, yöresel",
+        "type": "adjective"
+    },
+    {
+        "word": "Indispensable",
+        "translation": "Vazgeçilmez, zorunlu",
+        "type": "adjective"
+    },
+    {
+        "word": "Induce",
+        "translation": "İkna etmek, neden olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Inevitable",
+        "translation": "Kaçınılmaz",
+        "type": "adjective"
+    },
+    {
+        "word": "Infer",
+        "translation": "Sonuç çıkarmak",
+        "type": "verb"
+    },
+    {
+        "word": "Influence",
+        "translation": "Etkilemek",
+        "type": "verb"
+    },
+    {
+        "word": "Inform",
+        "translation": "Bilgilendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Inhabit",
+        "translation": "Yaşamak, yerleşmek",
+        "type": "verb"
+    },
+    {
+        "word": "Inherit",
+        "translation": "Miras almak",
+        "type": "verb"
+    },
+    {
+        "word": "Initial",
+        "translation": "İlk, başlangıç",
+        "type": "adjective"
+    },
+    {
+        "word": "Initiate",
+        "translation": "Başlatmak",
+        "type": "verb"
+    },
+    {
+        "word": "Innocent",
+        "translation": "Masum, suçsuz",
+        "type": "adjective"
+    },
+    {
+        "word": "Innovate",
+        "translation": "Yenilik yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Inquire",
+        "translation": "Soruştypemak, araştırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Insist",
+        "translation": "Israr etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Inspect",
+        "translation": "Denetlemek, incelemek",
+        "type": "verb"
+    },
+    {
+        "word": "Inspire",
+        "translation": "İlham vermek",
+        "type": "verb"
+    },
+    {
+        "word": "Install",
+        "translation": "Kurmak, monte etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Instant",
+        "translation": "Anlık, hemen olan",
+        "type": "adjective"
+    },
+    {
+        "word": "Instinct",
+        "translation": "İçgüdü",
+        "type": "noun"
+    },
+    {
+        "word": "Institute",
+        "translation": "Kuruluş, enstitü",
+        "type": "noun"
+    },
+    {
+        "word": "Instruct",
+        "translation": "Talimat vermek, öğretmek",
+        "type": "verb"
+    },
+    {
+        "word": "Insult",
+        "translation": "Hakaret etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Integrate",
+        "translation": "Bütünleştirmek, entegre etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Intellect",
+        "translation": "Zekâ, akıl",
+        "type": "noun"
+    },
+    {
+        "word": "Intelligent",
+        "translation": "Zeki, akıllı",
+        "type": "adjective"
+    },
+    {
+        "word": "Intend",
+        "translation": "Niyet etmek, amaçlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Intensify",
+        "translation": "Şiddetlendirmek, artırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Intention",
+        "translation": "Niyet, amaç",
+        "type": "noun"
+    },
+    {
+        "word": "Interact",
+        "translation": "Etkileşmek",
+        "type": "verb"
+    },
+    {
+        "word": "Interfere",
+        "translation": "Müdahale etmek, karışmak",
+        "type": "verb"
+    },
+    {
+        "word": "Interpret",
+        "translation": "Yorumlamak, tercüme etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Interrupt",
+        "translation": "Kesmek, araya girmek",
+        "type": "verb"
+    },
+    {
+        "word": "Interval",
+        "translation": "Ara, süre",
+        "type": "noun"
+    },
+    {
+        "word": "Intervene",
+        "translation": "Müdahale etmek, araya girmek",
+        "type": "verb"
+    },
+    {
+        "word": "Intimate",
+        "translation": "Samimi, yakın",
+        "type": "adjective"
+    },
+    {
+        "word": "Intricate",
+        "translation": "Karmaşık, girift",
+        "type": "adjective"
+    },
+    {
+        "word": "Introduce",
+        "translation": "Tanıtmak, tanıştırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Intrude",
+        "translation": "İzinsiz girmek",
+        "type": "verb"
+    },
+    {
+        "word": "Invent",
+        "translation": "İcat etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Invest",
+        "translation": "Yatırım yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Investigate",
+        "translation": "Araştırmak, incelemek",
+        "type": "verb"
+    },
+    {
+        "word": "Invisible",
+        "translation": "Görünmez",
+        "type": "adjective"
+    },
+    {
+        "word": "Invite",
+        "translation": "Davet etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Involve",
+        "translation": "Dahil etmek, kapsamak",
+        "type": "verb"
+    },
+    {
+        "word": "Irrelevant",
+        "translation": "İlgisiz, alakasız",
+        "type": "adjective"
+    },
+    {
+        "word": "Irritate",
+        "translation": "Rahatsız etmek, sinirlendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Issue",
+        "translation": "Konu, mesele",
+        "type": "noun"
+    },
+    {
+        "word": "Item",
+        "translation": "Madde, öğe",
+        "type": "noun"
+    },
+    {
+        "word": "Jeopardize",
+        "translation": "Tehlikeye atmak",
+        "type": "verb"
+    },
+    {
+        "word": "Joint",
+        "translation": "Ortak, birleşik",
+        "type": "adjective"
+    },
+    {
+        "word": "Judge",
+        "translation": "Yargılamak, değerlendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Judicial",
+        "translation": "Adli, hukuki",
+        "type": "adjective"
+    },
+    {
+        "word": "Justify",
+        "translation": "Haklı çıkarmak, gerekçelendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Keen",
+        "translation": "İstekli, hevesli",
+        "type": "adjective"
+    },
+    {
+        "word": "Label",
+        "translation": "Etiket, sınıflandırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Lack",
+        "translation": "Eksiklik, yoksunluk",
+        "type": "noun"
+    },
+    {
+        "word": "Lag",
+        "translation": "Geride kalmak",
+        "type": "verb"
+    },
+    {
+        "word": "Landscape",
+        "translation": "Manzara",
+        "type": "noun"
+    },
+    {
+        "word": "Largerly",
+        "translation": "Büyük ölçüde",
+        "type": "adverb"
+    },
+    {
+        "word": "Last",
+        "translation": "Sürmek, devam etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Launch",
+        "translation": "Başlatmak, fırlatmak",
+        "type": "verb"
+    },
+    {
+        "word": "Lay",
+        "translation": "Koymak, yerleştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Lead",
+        "translation": "Önderlik etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Leak",
+        "translation": "Sızdırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Lean",
+        "translation": "Eğilmek, dayanmak",
+        "type": "verb"
+    },
+    {
+        "word": "Lectypee",
+        "translation": "Ders vermek, konferans",
+        "type": "noun"
+    },
+    {
+        "word": "Legal",
+        "translation": "Yasal, hukuki",
+        "type": "adjective"
+    },
+    {
+        "word": "Legislate",
+        "translation": "Yasa çıkarmak",
+        "type": "verb"
+    },
+    {
+        "word": "Legitimate",
+        "translation": "Meşru, yasal",
+        "type": "adjective"
+    },
+    {
+        "word": "Lessen",
+        "translation": "Azaltmak, hafifletmek",
+        "type": "verb"
+    },
+    {
+        "word": "Lethal",
+        "translation": "Öldürücü, ölümcül",
+        "type": "adjective"
+    },
+    {
+        "word": "Liable",
+        "translation": "Sorumlu, yükümlü",
+        "type": "adjective"
+    },
+    {
+        "word": "Liberate",
+        "translation": "Özgür bırakmak, serbest bırakmak",
+        "type": "verb"
+    },
+    {
+        "word": "Limit",
+        "translation": "Sınırlamak, kısıtlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Linger",
+        "translation": "Oyalanmak, uzun süre kalmak",
+        "type": "verb"
+    },
+    {
+        "word": "Link",
+        "translation": "Bağlantı kurmak, bağlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Liquidate",
+        "translation": "Tasfiye etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Literal",
+        "translation": "wordsi wordsine, gerçek translationda",
+        "type": "adjective"
+    },
+    {
+        "word": "Litter",
+        "translation": "Çöp, etrafa saçmak",
+        "type": "noun"
+    },
+    {
+        "word": "Lively",
+        "translation": "Canlı, hareketli",
+        "type": "adjective"
+    },
+    {
+        "word": "Load",
+        "translation": "Yüklemek",
+        "type": "verb"
+    },
+    {
+        "word": "Locate",
+        "translation": "Yerini belirlemek, konumlandırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Logical",
+        "translation": "Mantıklı",
+        "type": "adjective"
+    },
+    {
+        "word": "Loyal",
+        "translation": "Sadık, vefalı",
+        "type": "adjective"
+    },
+    {
+        "word": "Maintain",
+        "translation": "Sürdürmek, korumak",
+        "type": "verb"
+    },
+    {
+        "word": "Major",
+        "translation": "Önemli, büyük",
+        "type": "adjective"
+    },
+    {
+        "word": "Manipulate",
+        "translation": "İdare etmek, yönlendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Manufactypee",
+        "translation": "Üretmek, imal etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Matypee",
+        "translation": "Olgun, yetişkin",
+        "type": "adjective"
+    },
+    {
+        "word": "Maximum",
+        "translation": "En yüksek, azami",
+        "type": "adjective"
+    },
+    {
+        "word": "Measure",
+        "translation": "Ölçmek, değerlendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Mediocre",
+        "translation": "Vasat, sıradan",
+        "type": "adjective"
+    },
+    {
+        "word": "Mend",
+        "translation": "Onarmak, tamir etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Merge",
+        "translation": "Birleşmek, kaynaşmak",
+        "type": "verb"
+    },
+    {
+        "word": "Migrant",
+        "translation": "Göçmen",
+        "type": "noun"
+    },
+    {
+        "word": "Mild",
+        "translation": "Hafif, yumuşak",
+        "type": "adjective"
+    },
+    {
+        "word": "Military",
+        "translation": "Askeri, orduyla ilgili",
+        "type": "adjective"
+    },
+    {
+        "word": "Minimize",
+        "translation": "En aza indirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Minor",
+        "translation": "Önemsiz, küçük",
+        "type": "adjective"
+    },
+    {
+        "word": "Misconception",
+        "translation": "Yanlış translationa",
+        "type": "noun"
+    },
+    {
+        "word": "Miserable",
+        "translation": "Perişan, sefil",
+        "type": "adjective"
+    },
+    {
+        "word": "Misinterpret",
+        "translation": "Yanlış yorumlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Mislead",
+        "translation": "Yanıltmak",
+        "type": "verb"
+    },
+    {
+        "word": "Missing",
+        "translation": "Eksik, kayıp",
+        "type": "adjective"
+    },
+    {
+        "word": "Mitigate",
+        "translation": "Hafifletmek, azaltmak",
+        "type": "verb"
+    },
+    {
+        "word": "Mobilize",
+        "translation": "Harekete geçirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Moderate",
+        "translation": "Ilımlı, orta derecede",
+        "type": "adjective"
+    },
+    {
+        "word": "Modify",
+        "translation": "Değiştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Monitor",
+        "translation": "İzlemek, gözlemlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Motive",
+        "translation": "Güdü, sebep",
+        "type": "noun"
+    },
+    {
+        "word": "Multiply",
+        "translation": "Çoğaltmak, çarpmak",
+        "type": "verb"
+    },
+    {
+        "word": "Mysterious",
+        "translation": "Gizemli",
+        "type": "adjective"
+    },
+    {
+        "word": "Narrate",
+        "translation": "Anlatmak, hikaye etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Neglect",
+        "translation": "İhmal etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Negotiate",
+        "translation": "Müzakere etmek, görüşmek",
+        "type": "verb"
+    },
+    {
+        "word": "Neutral",
+        "translation": "Tarafsız",
+        "type": "adjective"
+    },
+    {
+        "word": "Nominate",
+        "translation": "Aday göstermek",
+        "type": "verb"
+    },
+    {
+        "word": "Notable",
+        "translation": "Dikkate değer, kayda değer",
+        "type": "adjective"
+    },
+    {
+        "word": "Notorious",
+        "translation": "Kötü şöhretli",
+        "type": "adjective"
+    },
+    {
+        "word": "Notify",
+        "translation": "Bildirmek, haber vermek",
+        "type": "verb"
+    },
+    {
+        "word": "Nurtypee",
+        "translation": "Beslemek, büyütmek",
+        "type": "verb"
+    },
+    {
+        "word": "Obedient",
+        "translation": "İtaatkâr",
+        "type": "adjective"
+    },
+    {
+        "word": "Objective",
+        "translation": "Nesnel, tarafsız",
+        "type": "adjective"
+    },
+    {
+        "word": "Obligation",
+        "translation": "Zorunluluk, yükümlülük",
+        "type": "noun"
+    },
+    {
+        "word": "Obscure",
+        "translation": "Belirsiz, anlaşılması güç",
+        "type": "adjective"
+    },
+    {
+        "word": "Observe",
+        "translation": "Gözlemlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Obsolete",
+        "translation": "Eskimiş, modası geçmiş",
+        "type": "adjective"
+    },
+    {
+        "word": "Obstacle",
+        "translation": "Engel",
+        "type": "noun"
+    },
+    {
+        "word": "Obtain",
+        "translation": "Elde etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Obvious",
+        "translation": "Açık, bariz",
+        "type": "adjective"
+    },
+    {
+        "word": "Occasion",
+        "translation": "Fırsat, özel durum",
+        "type": "noun"
+    },
+    {
+        "word": "Occupy",
+        "translation": "İşgal etmek, meşgul etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Occur",
+        "translation": "Meydana gelmek",
+        "type": "verb"
+    },
+    {
+        "word": "Offend",
+        "translation": "Gücendirmek, kırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Omit",
+        "translation": "Çıkarmak, dahil etmemek",
+        "type": "verb"
+    },
+    {
+        "word": "Ongoing",
+        "translation": "Devam eden",
+        "type": "adjective"
+    },
+    {
+        "word": "Oppose",
+        "translation": "Karşı çıkmak",
+        "type": "verb"
+    },
+    {
+        "word": "Optimistic",
+        "translation": "İyimser",
+        "type": "adjective"
+    },
+    {
+        "word": "Option",
+        "translation": "Seçenek",
+        "type": "noun"
+    },
+    {
+        "word": "Ordinary",
+        "translation": "Sıradan",
+        "type": "adjective"
+    },
+    {
+        "word": "Organize",
+        "translation": "Düzenlemek, organize etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Originate",
+        "translation": "Kaynaklanmak, ortaya çıkmak",
+        "type": "verb"
+    },
+    {
+        "word": "Outbreak",
+        "translation": "Salgın, patlak verme",
+        "type": "noun"
+    },
+    {
+        "word": "Outcome",
+        "translation": "Sonuç, netice",
+        "type": "noun"
+    },
+    {
+        "word": "Outlook",
+        "translation": "Bakış açısı, görüş",
+        "type": "noun"
+    },
+    {
+        "word": "Outstanding",
+        "translation": "Göze çarpan, olağanüstü",
+        "type": "adjective"
+    },
+    {
+        "word": "Overall",
+        "translation": "Genel, kapsamlı",
+        "type": "adjective"
+    },
+    {
+        "word": "Overcome",
+        "translation": "Üstesinden gelmek",
+        "type": "verb"
+    },
+    {
+        "word": "Overestimate",
+        "translation": "Gözünde büyütmek",
+        "type": "verb"
+    },
+    {
+        "word": "Overlook",
+        "translation": "Göz ardı etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Overwhelming",
+        "translation": "Ezici, karşı konulamaz",
+        "type": "adjective"
+    },
+    {
+        "word": "Pace",
+        "translation": "Adım, tempo",
+        "type": "noun"
+    },
+    {
+        "word": "Paradox",
+        "translation": "Paradoks, çelişki",
+        "type": "noun"
+    },
+    {
+        "word": "Participate",
+        "translation": "Katılmak",
+        "type": "verb"
+    },
+    {
+        "word": "Particular",
+        "translation": "Özel, belirli",
+        "type": "adjective"
+    },
+    {
+        "word": "Passionate",
+        "translation": "Tutkulu",
+        "type": "adjective"
+    },
+    {
+        "word": "Patient",
+        "translation": "Sabırlı",
+        "type": "adjective"
+    },
+    {
+        "word": "Pattern",
+        "translation": "Desen, model",
+        "type": "noun"
+    },
+    {
+        "word": "Perceive",
+        "translation": "Algılamak",
+        "type": "verb"
+    },
+    {
+        "word": "Permanent",
+        "translation": "Kalıcı",
+        "type": "adjective"
+    },
+    {
+        "word": "Perplex",
+        "translation": "Şaşırtmak, kafasını karıştırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Persist",
+        "translation": "Israr etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Persuade",
+        "translation": "İkna etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Phase",
+        "translation": "Aşama, evre",
+        "type": "noun"
+    },
+    {
+        "word": "Phenomenon",
+        "translation": "Olay, olgu",
+        "type": "noun"
+    },
+    {
+        "word": "Philosophy",
+        "translation": "Felsefe",
+        "type": "noun"
+    },
+    {
+        "word": "Physical",
+        "translation": "Fiziksel",
+        "type": "adjective"
+    },
+    {
+        "word": "Plenty",
+        "translation": "Bol miktar",
+        "type": "noun"
+    },
+    {
+        "word": "Pollute",
+        "translation": "Kirletmek",
+        "type": "verb"
+    },
+    {
+        "word": "Portray",
+        "translation": "Betimlemek, tasvir etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Possess",
+        "translation": "Sahip olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Potential",
+        "translation": "Potansiyel",
+        "type": "adjective"
+    },
+    {
+        "word": "Practical",
+        "translation": "Pratik, kullanışlı",
+        "type": "adjective"
+    },
+    {
+        "word": "Precede",
+        "translation": "Önce gelmek",
+        "type": "verb"
+    },
+    {
+        "word": "Precaution",
+        "translation": "Önlem, tedbir",
+        "type": "noun"
+    },
+    {
+        "word": "Precise",
+        "translation": "Kesin, belirli",
+        "type": "adjective"
+    },
+    {
+        "word": "Predict",
+        "translation": "Tahmin etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Prejudice",
+        "translation": "Önyargı",
+        "type": "noun"
+    },
+    {
+        "word": "Preserve",
+        "translation": "Korumak, muhafaza etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Pretend",
+        "translation": "Numara yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Prevail",
+        "translation": "Galip gelmek, yaygın olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Primary",
+        "translation": "Temel, birincil",
+        "type": "adjective"
+    },
+    {
+        "word": "Prior",
+        "translation": "Önceki",
+        "type": "adjective"
+    },
+    {
+        "word": "Privilege",
+        "translation": "Ayrıcalık",
+        "type": "noun"
+    },
+    {
+        "word": "Proceed",
+        "translation": "İlerlemek, devam etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Profound",
+        "translation": "Derin, kapsamlı",
+        "type": "adjective"
+    },
+    {
+        "word": "Progress",
+        "translation": "İlerleme",
+        "type": "noun"
+    },
+    {
+        "word": "Prohibit",
+        "translation": "Yasaklamak",
+        "type": "verb"
+    },
+    {
+        "word": "Prominent",
+        "translation": "Öne çıkan, önemli",
+        "type": "adjective"
+    },
+    {
+        "word": "Promote",
+        "translation": "Terfi ettirmek, teşvik etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Prone",
+        "translation": "Eğilimli, yatkın",
+        "type": "adjective"
+    },
+    {
+        "word": "Property",
+        "translation": "Mülk, özellik",
+        "type": "noun"
+    },
+    {
+        "word": "Propose",
+        "translation": "Öneride bulunmak",
+        "type": "verb"
+    },
+    {
+        "word": "Prospect",
+        "translation": "Olasılık, ihtimal",
+        "type": "noun"
+    },
+    {
+        "word": "Prosper",
+        "translation": "Gelişmek, başarılı olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Protect",
+        "translation": "Korumak",
+        "type": "verb"
+    },
+    {
+        "word": "Protest",
+        "translation": "Protesto etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Prove",
+        "translation": "Kanıtlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Provide",
+        "translation": "Sağlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Publish",
+        "translation": "Yayınlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Punish",
+        "translation": "Cezalandırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Purchase",
+        "translation": "Satın almak",
+        "type": "verb"
+    },
+    {
+        "word": "Pursue",
+        "translation": "Takip etmek, peşinde koşmak",
+        "type": "verb"
+    },
+    {
+        "word": "Qualify",
+        "translation": "Nitelendirmek, hak kazanmak",
+        "type": "verb"
+    },
+    {
+        "word": "Quantity",
+        "translation": "Miktar",
+        "type": "noun"
+    },
+    {
+        "word": "Quote",
+        "translation": "Alıntı yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Radical",
+        "translation": "Köklü, radikal",
+        "type": "adjective"
+    },
+    {
+        "word": "Range",
+        "translation": "Çeşitlilik, menzil",
+        "type": "noun"
+    },
+    {
+        "word": "Rank",
+        "translation": "Rütbe, sıra",
+        "type": "noun"
+    },
+    {
+        "word": "Rapid",
+        "translation": "Hızlı",
+        "type": "adjective"
+    },
+    {
+        "word": "Rate",
+        "translation": "Oran, hız",
+        "type": "noun"
+    },
+    {
+        "word": "Rational",
+        "translation": "Mantıklı",
+        "type": "adjective"
+    },
+    {
+        "word": "Reach",
+        "translation": "Ulaşmak",
+        "type": "verb"
+    },
+    {
+        "word": "React",
+        "translation": "Tepki göstermek",
+        "type": "verb"
+    },
+    {
+        "word": "Realize",
+        "translation": "Farkına varmak",
+        "type": "verb"
+    },
+    {
+        "word": "Reasonable",
+        "translation": "Mantıklı, makul",
+        "type": "adjective"
+    },
+    {
+        "word": "Recall",
+        "translation": "Hatırlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Receive",
+        "translation": "Almak",
+        "type": "verb"
+    },
+    {
+        "word": "Recognize",
+        "translation": "Tanımak",
+        "type": "verb"
+    },
+    {
+        "word": "Recommend",
+        "translation": "Tavsiye etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Recover",
+        "translation": "İyileşmek",
+        "type": "verb"
+    },
+    {
+        "word": "Reduce",
+        "translation": "Azaltmak",
+        "type": "verb"
+    },
+    {
+        "word": "Refer",
+        "translation": "Atıfta bulunmak",
+        "type": "verb"
+    },
+    {
+        "word": "Reflect",
+        "translation": "Yansıtmak",
+        "type": "verb"
+    },
+    {
+        "word": "Reform",
+        "translation": "Reform yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Refuse",
+        "translation": "Reddetmek",
+        "type": "verb"
+    },
+    {
+        "word": "Regard",
+        "translation": "Saygı göstermek",
+        "type": "verb"
+    },
+    {
+        "word": "Regret",
+        "translation": "Pişman olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Regular",
+        "translation": "Düzenli",
+        "type": "adjective"
+    },
+    {
+        "word": "Reinforce",
+        "translation": "Pekiştirmek, güçlendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Reject",
+        "translation": "Reddetmek",
+        "type": "verb"
+    },
+    {
+        "word": "Relate",
+        "translation": "Bağlantı kurmak",
+        "type": "verb"
+    },
+    {
+        "word": "Release",
+        "translation": "Serbest bırakmak",
+        "type": "verb"
+    },
+    {
+        "word": "Relevant",
+        "translation": "İlgili, alakalı",
+        "type": "adjective"
+    },
+    {
+        "word": "Reluctant",
+        "translation": "Gönülsüz",
+        "type": "adjective"
+    },
+    {
+        "word": "Rely",
+        "translation": "Güvenmek",
+        "type": "verb"
+    },
+    {
+        "word": "Remain",
+        "translation": "Kalmak",
+        "type": "verb"
+    },
+    {
+        "word": "Remedy",
+        "translation": "Çare, ilaç",
+        "type": "noun"
+    },
+    {
+        "word": "Remove",
+        "translation": "Çıkarmak, kaldırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Render",
+        "translation": "Hale getirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Renew",
+        "translation": "Yenilemek",
+        "type": "verb"
+    },
+    {
+        "word": "Renovate",
+        "translation": "Tadilat yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Repeat",
+        "translation": "Tekrarlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Replace",
+        "translation": "Yerine koymak",
+        "type": "verb"
+    },
+    {
+        "word": "Represent",
+        "translation": "Temsil etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Reproduce",
+        "translation": "Çoğaltmak",
+        "type": "verb"
+    },
+    {
+        "word": "Require",
+        "translation": "Gerektirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Rescue",
+        "translation": "Kurtarmak",
+        "type": "verb"
+    },
+    {
+        "word": "Resemble",
+        "translation": "Benzemek",
+        "type": "verb"
+    },
+    {
+        "word": "Reserve",
+        "translation": "Ayırmak, rezerve etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Reside",
+        "translation": "İkamet etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Resolve",
+        "translation": "Çözmek, karar vermek",
+        "type": "verb"
+    },
+    {
+        "word": "Respect",
+        "translation": "Saygı duymak",
+        "type": "verb"
+    },
+    {
+        "word": "Respond",
+        "translation": "Yanıt vermek",
+        "type": "verb"
+    },
+    {
+        "word": "Restrict",
+        "translation": "Kısıtlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Retain",
+        "translation": "Tutmak, muhafaza etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Reveal",
+        "translation": "Ortaya çıkarmak",
+        "type": "verb"
+    },
+    {
+        "word": "Revenge",
+        "translation": "İntikam almak",
+        "type": "verb"
+    },
+    {
+        "word": "Reverse",
+        "translation": "Tersine çevirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Revise",
+        "translation": "Gözden geçirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Revolt",
+        "translation": "İsyan etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Reward",
+        "translation": "Ödüllendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Ridicule",
+        "translation": "Alay etmek, küçümsemek",
+        "type": "verb"
+    },
+    {
+        "word": "Risky",
+        "translation": "Riskli, tehlikeli",
+        "type": "adjective"
+    },
+    {
+        "word": "Rival",
+        "translation": "Rakip",
+        "type": "noun"
+    },
+    {
+        "word": "Robust",
+        "translation": "Sağlam, güçlü",
+        "type": "adjective"
+    },
+    {
+        "word": "Rotate",
+        "translation": "Dönmek, döndürmek",
+        "type": "verb"
+    },
+    {
+        "word": "Rough",
+        "translation": "Pürüzlü, kaba",
+        "type": "adjective"
+    },
+    {
+        "word": "Routine",
+        "translation": "Rutin, alışılmış",
+        "type": "noun"
+    },
+    {
+        "word": "Ruin",
+        "translation": "Mahvetmek, bozmak",
+        "type": "verb"
+    },
+    {
+        "word": "Rural",
+        "translation": "Kırsal",
+        "type": "adjective"
+    },
+    {
+        "word": "Sacrifice",
+        "translation": "Fedakarlık yapmak",
+        "type": "verb"
+    },
+    {
+        "word": "Satisfy",
+        "translation": "Tatmin etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Scarcely",
+        "translation": "Zar zor, neredeyse hiç",
+        "type": "adverb"
+    },
+    {
+        "word": "Scatter",
+        "translation": "Dağıtmak, saçmak",
+        "type": "verb"
+    },
+    {
+        "word": "Schedule",
+        "translation": "Pltranslationak",
+        "type": "verb"
+    },
+    {
+        "word": "Scheme",
+        "translation": "Plan, proje",
+        "type": "noun"
+    },
+    {
+        "word": "Scope",
+        "translation": "Kapsam, alan",
+        "type": "noun"
+    },
+    {
+        "word": "Scrutinize",
+        "translation": "İnce eleyip sık dokumak",
+        "type": "verb"
+    },
+    {
+        "word": "Secure",
+        "translation": "Güvence altına almak",
+        "type": "verb"
+    },
+    {
+        "word": "Seek",
+        "translation": "Aramak, çabalamak",
+        "type": "verb"
+    },
+    {
+        "word": "Select",
+        "translation": "Seçmek",
+        "type": "verb"
+    },
+    {
+        "word": "Sensible",
+        "translation": "Mantıklı, akıllıca",
+        "type": "adjective"
+    },
+    {
+        "word": "Sequence",
+        "translation": "Sıra, dizi",
+        "type": "noun"
+    },
+    {
+        "word": "Severe",
+        "translation": "Şiddetli, sert",
+        "type": "adjective"
+    },
+    {
+        "word": "Shortage",
+        "translation": "Eksiklik, kıtlık",
+        "type": "noun"
+    },
+    {
+        "word": "Significant",
+        "translation": "Önemli, translationlı",
+        "type": "adjective"
+    },
+    {
+        "word": "Skeptical",
+        "translation": "Şüpheci",
+        "type": "adjective"
+    },
+    {
+        "word": "Slight",
+        "translation": "Hafif, önemsiz",
+        "type": "adjective"
+    },
+    {
+        "word": "Solid",
+        "translation": "Katı, sağlam",
+        "type": "adjective"
+    },
+    {
+        "word": "Sophisticated",
+        "translation": "Gelişmiş, sofistike",
+        "type": "adjective"
+    },
+    {
+        "word": "Sorrow",
+        "translation": "Üzüntü, keder",
+        "type": "noun"
+    },
+    {
+        "word": "Sort",
+        "translation": "Tür, çeşit",
+        "type": "noun"
+    },
+    {
+        "word": "Source",
+        "translation": "Kaynak",
+        "type": "noun"
+    },
+    {
+        "word": "Sovereign",
+        "translation": "Egemen, bağımsız",
+        "type": "adjective"
+    },
+    {
+        "word": "Spare",
+        "translation": "Yedek, boş",
+        "type": "adjective"
+    },
+    {
+        "word": "Specify",
+        "translation": "Belirlemek, detaylandırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Spectacle",
+        "translation": "Görsel şölen, gösteri",
+        "type": "noun"
+    },
+    {
+        "word": "Spontaneous",
+        "translation": "Kendiliğinden olan",
+        "type": "adjective"
+    },
+    {
+        "word": "Stable",
+        "translation": "Kararlı, sabit",
+        "type": "adjective"
+    },
+    {
+        "word": "Stagnant",
+        "translation": "Durgun, hareketsiz",
+        "type": "adjective"
+    },
+    {
+        "word": "Stimulate",
+        "translation": "Teşvik etmek, uyarmak",
+        "type": "verb"
+    },
+    {
+        "word": "Strategic",
+        "translation": "Stratejik",
+        "type": "adjective"
+    },
+    {
+        "word": "Strengthen",
+        "translation": "Güçlendirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Striking",
+        "translation": "Çarpıcı, dikkat çekici",
+        "type": "adjective"
+    },
+    {
+        "word": "Struggle",
+        "translation": "Mücadele etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Stubborn",
+        "translation": "İnatçı",
+        "type": "adjective"
+    },
+    {
+        "word": "Subsequent",
+        "translation": "Takip eden, sonraki",
+        "type": "adjective"
+    },
+    {
+        "word": "Substantial",
+        "translation": "Büyük, önemli",
+        "type": "adjective"
+    },
+    {
+        "word": "Substitute",
+        "translation": "Yerine koymak",
+        "type": "verb"
+    },
+    {
+        "word": "Subtle",
+        "translation": "Hafif, belli belirsiz",
+        "type": "adjective"
+    },
+    {
+        "word": "Sufficient",
+        "translation": "Yeterli",
+        "type": "adjective"
+    },
+    {
+        "word": "Suggest",
+        "translation": "Önermek",
+        "type": "verb"
+    },
+    {
+        "word": "Summarize",
+        "translation": "Özetlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Superficial",
+        "translation": "Yüzeysel",
+        "type": "adjective"
+    },
+    {
+        "word": "Supervise",
+        "translation": "Denetlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Supplement",
+        "translation": "Takviye etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Suppress",
+        "translation": "Bastırmak, önlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Surplus",
+        "translation": "Fazlalık, fazla",
+        "type": "noun"
+    },
+    {
+        "word": "Surrender",
+        "translation": "Teslim olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Surround",
+        "translation": "Çevrelemek",
+        "type": "verb"
+    },
+    {
+        "word": "Suspect",
+        "translation": "Şüphelenmek",
+        "type": "verb"
+    },
+    {
+        "word": "Sustain",
+        "translation": "Sürdürmek",
+        "type": "verb"
+    },
+    {
+        "word": "Symbolize",
+        "translation": "Sembolize etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Sympathy",
+        "translation": "Empati, anlayış",
+        "type": "noun"
+    },
+    {
+        "word": "Tangible",
+        "translation": "Somut",
+        "type": "adjective"
+    },
+    {
+        "word": "Tendency",
+        "translation": "Eğilim, meyil",
+        "type": "noun"
+    },
+    {
+        "word": "Terminate",
+        "translation": "Sonlandırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Territory",
+        "translation": "Bölge, toprak",
+        "type": "noun"
+    },
+    {
+        "word": "Testify",
+        "translation": "Tanıklık etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Threaten",
+        "translation": "Tehdit etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Tolerate",
+        "translation": "Hoşgörmek",
+        "type": "verb"
+    },
+    {
+        "word": "Trace",
+        "translation": "İzini sürmek, belirti",
+        "type": "verb"
+    },
+    {
+        "word": "Tradition",
+        "translation": "Gelenek",
+        "type": "noun"
+    },
+    {
+        "word": "Tragedy",
+        "translation": "Trajedi, felaket",
+        "type": "noun"
+    },
+    {
+        "word": "Transfer",
+        "translation": "Aktarmak, devretmek",
+        "type": "verb"
+    },
+    {
+        "word": "Transform",
+        "translation": "Dönüştürmek",
+        "type": "verb"
+    },
+    {
+        "word": "Transition",
+        "translation": "Geçiş, değişim",
+        "type": "noun"
+    },
+    {
+        "word": "Transmit",
+        "translation": "İletmek, yaymak",
+        "type": "verb"
+    },
+    {
+        "word": "Transparent",
+        "translation": "Şeffaf",
+        "type": "adjective"
+    },
+    {
+        "word": "Transport",
+        "translation": "Taşımak, nakletmek",
+        "type": "verb"
+    },
+    {
+        "word": "Trap",
+        "translation": "Tuzak, kapan",
+        "type": "noun"
+    },
+    {
+        "word": "Tremendous",
+        "translation": "Muazzam, çok büyük",
+        "type": "adjective"
+    },
+    {
+        "word": "Trend",
+        "translation": "Eğilim, akım",
+        "type": "noun"
+    },
+    {
+        "word": "Trigger",
+        "translation": "Tetiklemek",
+        "type": "verb"
+    },
+    {
+        "word": "Trustworthy",
+        "translation": "Güvenilir",
+        "type": "adjective"
+    },
+    {
+        "word": "Ultimate",
+        "translation": "Nihai, en son",
+        "type": "adjective"
+    },
+    {
+        "word": "Unanimous",
+        "translation": "Oy birliği ile alınmış",
+        "type": "adjective"
+    },
+    {
+        "word": "Uncertain",
+        "translation": "Belirsiz, kesin olmayan",
+        "type": "adjective"
+    },
+    {
+        "word": "Uncover",
+        "translation": "Ortaya çıkarmak",
+        "type": "verb"
+    },
+    {
+        "word": "Undertake",
+        "translation": "Üstlenmek",
+        "type": "verb"
+    },
+    {
+        "word": "Unexpected",
+        "translation": "Beklenmedik",
+        "type": "adjective"
+    },
+    {
+        "word": "Unfold",
+        "translation": "Açmak, gelişmek",
+        "type": "verb"
+    },
+    {
+        "word": "Uniform",
+        "translation": "Tek tip, üniforma",
+        "type": "noun"
+    },
+    {
+        "word": "Unite",
+        "translation": "Birleşmek, birleştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Unprecedented",
+        "translation": "Eşi benzeri görülmemiş",
+        "type": "adjective"
+    },
+    {
+        "word": "Unveil",
+        "translation": "Ortaya çıkarmak, açığa vurmak",
+        "type": "verb"
+    },
+    {
+        "word": "Urge",
+        "translation": "Dürtü, teşvik etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Utility",
+        "translation": "Fayda, kamu hizmeti",
+        "type": "noun"
+    },
+    {
+        "word": "Vacant",
+        "translation": "Boş, müsait",
+        "type": "adjective"
+    },
+    {
+        "word": "Vague",
+        "translation": "Belirsiz, muğlak",
+        "type": "adjective"
+    },
+    {
+        "word": "Valid",
+        "translation": "Geçerli",
+        "type": "adjective"
+    },
+    {
+        "word": "Vanish",
+        "translation": "Gözden kaybolmak",
+        "type": "verb"
+    },
+    {
+        "word": "Variable",
+        "translation": "Değişken",
+        "type": "noun"
+    },
+    {
+        "word": "Ventypee",
+        "translation": "Girişim, tehlikeli iş",
+        "type": "noun"
+    },
+    {
+        "word": "Verify",
+        "translation": "Doğrulamak, onaylamak",
+        "type": "verb"
+    },
+    {
+        "word": "Versatile",
+        "translation": "Çok yönlü",
+        "type": "adjective"
+    },
+    {
+        "word": "Viable",
+        "translation": "Uygulanabilir",
+        "type": "adjective"
+    },
+    {
+        "word": "Vibrant",
+        "translation": "Canlı, enerjik",
+        "type": "adjective"
+    },
+    {
+        "word": "Vicious",
+        "translation": "Şiddetli, kötü",
+        "type": "adjective"
+    },
+    {
+        "word": "Viewpoint",
+        "translation": "Bakış açısı",
+        "type": "noun"
+    },
+    {
+        "word": "Vigilant",
+        "translation": "Dikkatli, tetikte",
+        "type": "adjective"
+    },
+    {
+        "word": "Vigor",
+        "translation": "Enerji, dinçlik",
+        "type": "noun"
+    },
+    {
+        "word": "Vulnerable",
+        "translation": "Savunmasız, hassas",
+        "type": "adjective"
+    },
+    {
+        "word": "Wander",
+        "translation": "Başıboş dolaşmak",
+        "type": "verb"
+    },
+    {
+        "word": "Warrant",
+        "translation": "Garanti etmek, yetki vermek",
+        "type": "verb"
+    },
+    {
+        "word": "Weaken",
+        "translation": "Zayıflatmak",
+        "type": "verb"
+    },
+    {
+        "word": "Wealth",
+        "translation": "Zenginlik, varlık",
+        "type": "noun"
+    },
+    {
+        "word": "Wholesome",
+        "translation": "Sağlıklı, faydalı",
+        "type": "adjective"
+    },
+    {
+        "word": "Widespread",
+        "translation": "Yaygın",
+        "type": "adjective"
+    },
+    {
+        "word": "Willing",
+        "translation": "İstekli",
+        "type": "adjective"
+    },
+    {
+        "word": "Wisdom",
+        "translation": "Bilgelik",
+        "type": "noun"
+    },
+    {
+        "word": "Withdraw",
+        "translation": "Geri çekmek",
+        "type": "verb"
+    },
+    {
+        "word": "Witness",
+        "translation": "Tanık olmak, şahit",
+        "type": "noun"
+    },
+    {
+        "word": "Worthy",
+        "translation": "Değerli, layık",
+        "type": "adjective"
+    },
+    {
+        "word": "Yield",
+        "translation": "Ürün vermek, teslim olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Zeal",
+        "translation": "Heves, şevk",
+        "type": "noun"
+    },
+    {
+        "word": "Zenith",
+        "translation": "Zirve, doruk",
+        "type": "noun"
+    },
+    {
+        "word": "Zone",
+        "translation": "Bölge, alan",
+        "type": "noun"
+    },
+    {
+        "word": "Abundant",
+        "translation": "Bol, bereketli",
+        "type": "adjective"
+    },
+    {
+        "word": "Acute",
+        "translation": "Keskin, ciddi",
+        "type": "adjective"
+    },
+    {
+        "word": "Adverse",
+        "translation": "Olumsuz, ters",
+        "type": "adjective"
+    },
+    {
+        "word": "Agile",
+        "translation": "Çevik, hızlı",
+        "type": "adjective"
+    },
+    {
+        "word": "Allege",
+        "translation": "İddia etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Alleviate",
+        "translation": "Hafifletmek, yatıştırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Ample",
+        "translation": "Geniş, bol",
+        "type": "adjective"
+    },
+    {
+        "word": "Animate",
+        "translation": "Canlandırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Annex",
+        "translation": "Eklemek, ilhak etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Antagonize",
+        "translation": "Düşman etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Apprehend",
+        "translation": "Tutuklamak, translationak",
+        "type": "verb"
+    },
+    {
+        "word": "Arduous",
+        "translation": "Zor, meşakkatli",
+        "type": "adjective"
+    },
+    {
+        "word": "Articulate",
+        "translation": "Açıkça ifade etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Aspiration",
+        "translation": "Arzu, istek",
+        "type": "noun"
+    },
+    {
+        "word": "Assimilate",
+        "translation": "Özümsemek",
+        "type": "verb"
+    },
+    {
+        "word": "Astonish",
+        "translation": "Şaşırtmak",
+        "type": "verb"
+    },
+    {
+        "word": "Attain",
+        "translation": "Elde etmek, ulaşmak",
+        "type": "verb"
+    },
+    {
+        "word": "Austere",
+        "translation": "Ciddi, sert",
+        "type": "adjective"
+    },
+    {
+        "word": "Avarice",
+        "translation": "Açgözlülük",
+        "type": "noun"
+    },
+    {
+        "word": "Aversion",
+        "translation": "Tiksinti, hoşlanmama",
+        "type": "noun"
+    },
+    {
+        "word": "Baffle",
+        "translation": "Şaşırtmak, engellemek",
+        "type": "verb"
+    },
+    {
+        "word": "Banter",
+        "translation": "Şakalaşmak",
+        "type": "verb"
+    },
+    {
+        "word": "Beckon",
+        "translation": "Çağırmak, işaret etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Belittle",
+        "translation": "Küçümsemek",
+        "type": "verb"
+    },
+    {
+        "word": "Benevolent",
+        "translation": "İyiliksever",
+        "type": "adjective"
+    },
+    {
+        "word": "Bewilder",
+        "translation": "Şaşırtmak",
+        "type": "verb"
+    },
+    {
+        "word": "Blunt",
+        "translation": "Kör, açık sözlü",
+        "type": "adjective"
+    },
+    {
+        "word": "Bolster",
+        "translation": "Desteklemek",
+        "type": "verb"
+    },
+    {
+        "word": "Brim",
+        "translation": "Dolu olmak, taşmak",
+        "type": "verb"
+    },
+    {
+        "word": "Brisk",
+        "translation": "Canlı, hareketli",
+        "type": "adjective"
+    },
+    {
+        "word": "Cajole",
+        "translation": "Tatlı dille kandırmak",
+        "type": "verb"
+    },
+    {
+        "word": "Callous",
+        "translation": "Duygusuz",
+        "type": "adjective"
+    },
+    {
+        "word": "Camouflage",
+        "translation": "Kamufle etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Candid",
+        "translation": "Dürüst, içten",
+        "type": "adjective"
+    },
+    {
+        "word": "Capitulate",
+        "translation": "Teslim olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Carnage",
+        "translation": "Katliam",
+        "type": "noun"
+    },
+    {
+        "word": "Catastrophe",
+        "translation": "Felaket",
+        "type": "noun"
+    },
+    {
+        "word": "Ceasefire",
+        "translation": "Ateşkes",
+        "type": "noun"
+    },
+    {
+        "word": "Censure",
+        "translation": "Kınamak",
+        "type": "verb"
+    },
+    {
+        "word": "Chronic",
+        "translation": "Kronik, sürekli",
+        "type": "adjective"
+    },
+    {
+        "word": "Circumspect",
+        "translation": "Dikkatli, tedbirli",
+        "type": "adjective"
+    },
+    {
+        "word": "Clairvoyant",
+        "translation": "Kehanet yeteneği olan",
+        "type": "adjective"
+    },
+    {
+        "word": "Coax",
+        "translation": "İkna etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Coerce",
+        "translation": "Zorlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Commend",
+        "translation": "Övmek, tavsiye etmek",
+        "type": "verb"
+    },
+    {
+        "word": "Compassion",
+        "translation": "Merhamet",
+        "type": "noun"
+    },
+    {
+        "word": "Composure",
+        "translation": "Sakinlik, soğukkanlılık",
+        "type": "noun"
+    },
+    {
+        "word": "Conceal",
+        "translation": "Gizlemek",
+        "type": "verb"
+    },
+    {
+        "word": "Concur",
+        "translation": "Aynı fikirde olmak",
+        "type": "verb"
+    },
+    {
+        "word": "Condemn",
+        "translation": "Kınamak",
+        "type": "verb"
+    },
+    {
+        "word": "Condescending",
+        "translation": "Küçümseyici",
+        "type": "adjective"
+    },
+    {
+        "word": "Consensus",
+        "translation": "Fikir birliği",
+        "type": "noun"
+    },
+    {
+        "word": "Conspicuous",
+        "translation": "Göze çarpan",
+        "type": "adjective"
+    },
+    {
+        "word": "Contemplate",
+        "translation": "Düşünüp taşınmak",
+        "type": "verb"
+    },
+    {
+        "word": "Controversial",
+        "translation": "Tartışmalı",
+        "type": "adjective"
+    },
+    {
+        "word": "Convene",
+        "translation": "Toplanmak",
+        "type": "verb"
+    },
+    {
+        "word": "Convoluted",
+        "translation": "Karmaşık",
+        "type": "adjective"
+    },
+    {
+        "word": "Copious",
+        "translation": "Bol, çok",
+        "type": "adjective"
+    },
+    {
+        "word": "Counterfeit",
+        "translation": "Sahte",
+        "type": "adjective"
+    },
+    {
+        "word": "Culminate",
+        "translation": "Sonuçlanmak",
+        "type": "verb"
+    },
+    {
+        "word": "Curtail",
+        "translation": "Azaltmak, sınırlamak",
+        "type": "verb"
+    },
+    {
+        "word": "Daunting",
+        "translation": "Korkutucu",
+        "type": "adjective"
+    },
+    {
+        "word": "Debilitate",
+        "translation": "Güçsüzleştirmek",
+        "type": "verb"
+    },
+    {
+        "word": "Decipher",
+        "translation": "Çözmek, translationını çıkarmak",
+        "type": "verb"
+    },
+    {
+        "word": "Defiant",
+        "translation": "Karşı koyan",
+        "type": "adjective"
+    },
+    {
+        "word": "Deplete",
+        "translation": "Tüketmek",
+        "type": "verb"
+    },
+    {
+        "word": "Depravity",
+        "translation": "Ahlaki çöküş",
+        "type": "noun"
+    },
+    {
+        "word": "Derogatory",
+        "translation": "Aşağılayıcı",
+        "type": "adjective"
+    },
+    {
+        "word": "Detrimental",
+        "translation": "Zararlı",
+        "type": "adjective"
+    },
+    {
+        "word": "Devout",
+        "translation": "Dindar, sadık",
+        "type": "adjective"
+    },
+    {
+        "word": "Diligent",
+        "translation": "Çalışkan, gayretli",
+        "type": "adjective"
+    }
+]
