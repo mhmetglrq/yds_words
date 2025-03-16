@@ -10,6 +10,8 @@ class WordModel extends WordEntity {
     required super.word,
     required super.translation,
     required super.type,
+    required super.exampleSentence,
+    required super.exampleTranslation,
   });
 
   factory WordModel.fromJson(Map<String, dynamic> json) {
@@ -18,6 +20,8 @@ class WordModel extends WordEntity {
       word: json['word'],
       translation: json['translation'],
       type: json['type'],
+      exampleSentence: json['exampleSentence'],
+      exampleTranslation: json['exampleTranslation'],
     );
   }
 
@@ -27,6 +31,8 @@ class WordModel extends WordEntity {
       'word': word,
       'translation': translation,
       'type': type,
+      'exampleSentence': exampleSentence,
+      'exampleTranslation': exampleTranslation,
     };
   }
 
@@ -36,6 +42,8 @@ class WordModel extends WordEntity {
       word: entity.word,
       translation: entity.translation,
       type: entity.type,
+      exampleSentence: entity.exampleSentence,
+      exampleTranslation: entity.exampleTranslation,
     );
   }
 
@@ -44,12 +52,16 @@ class WordModel extends WordEntity {
     String? word,
     String? translation,
     String? type,
+    String? exampleSentence,
+    String? exampleTranslation,
   }) {
     return WordModel(
       id: id ?? this.id,
       word: word ?? this.word,
       translation: translation ?? this.translation,
       type: type ?? this.type,
+      exampleSentence: exampleSentence ?? this.exampleSentence,
+      exampleTranslation: exampleTranslation ?? this.exampleTranslation,
     );
   }
 }
