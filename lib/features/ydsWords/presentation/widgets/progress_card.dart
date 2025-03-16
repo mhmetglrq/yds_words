@@ -13,7 +13,7 @@ class ProgressCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: context.paddingVerticalLow,
+      padding: context.paddingVerticalDefault,
       child: Card(
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(16),
@@ -47,7 +47,8 @@ class ProgressCard extends StatelessWidget {
                             BorderRadius.circular(8), // yuvarlak köşeler
                         child: LinearProgressIndicator(
                           minHeight: 8,
-                          value: 0.5, // %50 dolu
+                          value: (state.learnedWords.length /
+                              state.words.length), // %50 dolu
                           backgroundColor: AppColors.kInfoColor,
                           valueColor: AlwaysStoppedAnimation<Color>(
                             AppColors.kPrimaryColor,

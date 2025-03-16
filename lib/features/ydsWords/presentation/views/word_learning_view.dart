@@ -59,11 +59,26 @@ class WordLearningView extends StatelessWidget {
                             Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
-                                Text(
-                                  currentWord.word,
-                                  style: context.textTheme.bodyLarge?.copyWith(
-                                    color: Colors.white,
-                                  ),
+                                Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      "${currentWord.word} - ",
+                                      style:
+                                          context.textTheme.bodyLarge?.copyWith(
+                                        color: Colors.white,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      currentWord.type,
+                                      style: context.textTheme.bodyLarge
+                                          ?.copyWith(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.w300,
+                                              fontStyle: FontStyle.italic),
+                                    ),
+                                  ],
                                 ),
                                 const Divider(
                                   color: Colors.white,
@@ -73,6 +88,7 @@ class WordLearningView extends StatelessWidget {
                                   currentWord.translation,
                                   style: context.textTheme.bodyLarge?.copyWith(
                                     color: Colors.white,
+                                    fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ],
@@ -94,7 +110,7 @@ class WordLearningView extends StatelessWidget {
                                   .read<WordLearningBloc>()
                                   .add(PreviousWord());
                             },
-                            child: const Text("Previous Word"),
+                            child: const Text("Önceki Kelime"),
                           )
                         else
                           const SizedBox(),
@@ -107,7 +123,7 @@ class WordLearningView extends StatelessWidget {
                                           .add(NextWord());
                                     }
                                   : null, // Son kelimedeyse devre dışı bırak
-                          child: const Text("Next Word"),
+                          child: const Text("Sonraki Kelime"),
                         ),
                       ],
                     ),
@@ -121,12 +137,6 @@ class WordLearningView extends StatelessWidget {
             }
           },
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          context.read<WordLearningBloc>().add(LoadWords());
-        },
-        child: const Icon(Icons.refresh),
       ),
     );
   }
