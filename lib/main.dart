@@ -11,7 +11,9 @@ Future<void> main() async {
   runApp(MultiBlocProvider(
     providers: [
       BlocProvider<WordLearningBloc>(
-        create: (context) => sl<WordLearningBloc>()..add(LoadWords()),
+        create: (context) => sl<WordLearningBloc>()
+          ..add(LoadWords())
+          ..add(LoadLearnedWords()),
       ),
     ],
     child: const MyApp(),
