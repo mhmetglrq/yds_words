@@ -37,3 +37,10 @@ class SpeakWord extends WordLearningEvent {
 class NextWord extends WordLearningEvent {} // Yeni olay
 
 class PreviousWord extends WordLearningEvent {} // Yeni olay
+
+class FilterLearnedWords extends WordLearningEvent {
+  final String wordType;
+  const FilterLearnedWords(this.wordType);
+  @override
+  List<Object> get props => [wordType];
+}
