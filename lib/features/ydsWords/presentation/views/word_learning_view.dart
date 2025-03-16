@@ -11,7 +11,7 @@ class WordLearningView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Word Learning"),
+        title: const Text("Yeni Kelimeler Öğren"),
       ),
       body: Padding(
         padding: context.paddingDefault,

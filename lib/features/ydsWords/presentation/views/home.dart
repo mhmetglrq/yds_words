@@ -51,9 +51,8 @@ class Home extends StatelessWidget {
               Padding(
                 padding: context.paddingVerticalLow,
                 child: ElevatedButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, RouteNames.learnedWords);
-                  },
+                  onPressed: () =>
+                      Navigator.pushNamed(context, RouteNames.learnedWords),
                   style: ElevatedButton.styleFrom(
                     backgroundColor: AppColors.kWhiteColor,
                     shape: RoundedRectangleBorder(
