@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../features/ydsWords/presentation/views/home.dart';
+import '../../features/ydsWords/presentation/views/learned_words_view.dart';
 import '../../features/ydsWords/presentation/views/word_learning_view.dart';
 import 'route_names.dart';
 
@@ -22,6 +23,12 @@ class AppRouter {
         return slideRoute(
           settings: settings,
           view: WordLearningView(),
+        );
+
+      case RouteNames.learnedWords:
+        return slideRoute(
+          settings: settings,
+          view: LearnedWordsView(),
         );
 
       // If no matching route is found, return an error page.
