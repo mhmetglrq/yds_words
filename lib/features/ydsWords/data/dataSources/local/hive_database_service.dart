@@ -85,7 +85,21 @@ class HiveDatabaseService {
     bool preload = false,
   }) async {
     if (Hive.isBoxOpen(boxName)) {
-      return lazy ? Hive.lazyBox<T>(boxName) : Hive.box<T>(boxName);
+      try {
+        if (lazy) {
+          final currentBox = Hive.lazyBox<T>(boxName);
+          return currentBox;
+        } else {
+          final currentBox = Hive.box<T>(boxName);
+          return currentBox;
+        }
+      } catch (e) {
+        _logWarning(
+          'Box "$boxName" is already open with a different type. Closing and reopening.',
+          error: e,
+        );
+        await Hive.box(boxName).close();
+      }
     }
 
     final cipher = encryptionKey != null
@@ -117,14 +131,14 @@ class HiveDatabaseService {
   Future<void> _preloadLazyBox<T>(LazyBox<T> box) async {
     final keys = box.keys.take(_config['maxCacheSize'] as int);
     for (final key in keys) {
-      await box.get(key); // Load into memory
+      await box.get(key);
     }
   }
 
   /// Closes a box if open.
-  Future<void> _closeBoxIfOpen(String boxName) async {
+  Future<void> _closeBoxIfOpen<T>(String boxName) async {
     if (Hive.isBoxOpen(boxName)) {
-      await Hive.box(boxName).close();
+      await Hive.box<T>(boxName).close();
     }
   }
 
@@ -160,7 +174,7 @@ class HiveDatabaseService {
         lazy: lazy,
       );
       await box.put(key, value);
-      if (closeBoxAfterOperation) await _closeBoxIfOpen(boxName);
+      if (closeBoxAfterOperation) await _closeBoxIfOpen<T>(boxName);
     } catch (e) {
       _handleError('Failed to put data', e);
       rethrow;
@@ -170,7 +184,7 @@ class HiveDatabaseService {
   /// Stores multiple key-value pairs in a batch.
   Future<void> putAllData<T>(
     String boxName,
-    Map<String, T> dataMap, {
+    Map<String, T> data, {
     List<int>? encryptionKey,
     bool lazy = false,
     bool closeBoxAfterOperation = true,
@@ -181,8 +195,15 @@ class HiveDatabaseService {
         encryptionKey: encryptionKey,
         lazy: lazy,
       );
-      await box.putAll(dataMap);
-      if (closeBoxAfterOperation) await _closeBoxIfOpen(boxName);
+      // LazyBox does not support putAll; add entries one by one.
+      if (box is LazyBox<T>) {
+        for (final entry in data.entries) {
+          await box.put(entry.key, entry.value);
+        }
+      } else {
+        await box.putAll(data);
+      }
+      if (closeBoxAfterOperation) await _closeBoxIfOpen<T>(boxName);
     } catch (e) {
       _handleError('Failed to put all data', e);
       rethrow;
@@ -205,11 +226,11 @@ class HiveDatabaseService {
       );
       T? value;
       if (box is LazyBox<T>) {
-        value = await (box).get(key); // LazyBox için await ile get
+        value = await box.get(key);
       } else if (box is Box<T>) {
-        value = (box).get(key); // Normal Box için direkt get
+        value = box.get(key);
       }
-      if (closeBoxAfterOperation) await _closeBoxIfOpen(boxName);
+      if (closeBoxAfterOperation) await _closeBoxIfOpen<T>(boxName);
       return value;
     } catch (e) {
       _handleError('Failed to get data', e);
@@ -239,7 +260,7 @@ class HiveDatabaseService {
       } else {
         dataList.addAll((box as Box<T>).values);
       }
-      if (closeBoxAfterOperation) await _closeBoxIfOpen(boxName);
+      if (closeBoxAfterOperation) await _closeBoxIfOpen<T>(boxName);
       return dataList;
     } catch (e) {
       _handleError('Failed to get all data', e);
@@ -262,7 +283,7 @@ class HiveDatabaseService {
         lazy: lazy,
       );
       final result = box.containsKey(key);
-      if (closeBoxAfterOperation) await _closeBoxIfOpen(boxName);
+      if (closeBoxAfterOperation) await _closeBoxIfOpen<T>(boxName);
       return result;
     } catch (e) {
       _handleError('Failed to check key', e);
@@ -284,7 +305,7 @@ class HiveDatabaseService {
         lazy: lazy,
       );
       final length = box.length;
-      if (closeBoxAfterOperation) await _closeBoxIfOpen(boxName);
+      if (closeBoxAfterOperation) await _closeBoxIfOpen<T>(boxName);
       return length;
     } catch (e) {
       _handleError('Failed to get box length', e);
@@ -307,7 +328,7 @@ class HiveDatabaseService {
         lazy: lazy,
       );
       await box.delete(key);
-      if (closeBoxAfterOperation) await _closeBoxIfOpen(boxName);
+      if (closeBoxAfterOperation) await _closeBoxIfOpen<T>(boxName);
     } catch (e) {
       _handleError('Failed to delete data', e);
       rethrow;
@@ -329,7 +350,7 @@ class HiveDatabaseService {
         lazy: lazy,
       );
       await box.deleteAll(keys);
-      if (closeBoxAfterOperation) await _closeBoxIfOpen(boxName);
+      if (closeBoxAfterOperation) await _closeBoxIfOpen<T>(boxName);
     } catch (e) {
       _handleError('Failed to delete all data', e);
       rethrow;
@@ -350,7 +371,7 @@ class HiveDatabaseService {
         lazy: lazy,
       );
       await box.clear();
-      if (closeBoxAfterOperation) await _closeBoxIfOpen(boxName);
+      if (closeBoxAfterOperation) await _closeBoxIfOpen<T>(boxName);
     } catch (e) {
       _handleError('Failed to clear box', e);
       rethrow;
@@ -359,7 +380,7 @@ class HiveDatabaseService {
 
   /// Closes a specific box.
   Future<void> closeBox<T>(String boxName) async {
-    await _closeBoxIfOpen(boxName);
+    await _closeBoxIfOpen<T>(boxName);
   }
 
   /// Closes all open boxes.
@@ -437,7 +458,13 @@ class HiveDatabaseService {
         lazy: lazy,
       );
       if (clearBeforeRestore) await box.clear();
-      await box.putAll(data);
+      if (box is LazyBox<T>) {
+        for (final entry in data.entries) {
+          await box.put(entry.key, entry.value);
+        }
+      } else {
+        await box.putAll(data);
+      }
     } catch (e) {
       _handleError('Failed to restore box', e);
       rethrow;
