@@ -34,7 +34,7 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
         _getWordsUseCase = getWordsUseCase,
         _learnWordUsecase = learnWordUsecase,
         _speakWordUsecase = speakWordUsecase,
-        super(const WordLearningInitial()) {
+        super(WordLearningInitial()) {
     on<LoadWords>(_onLoadWords);
     on<LoadLearnedWords>(_onLoadLearnedWords);
     on<LearnWord>(_onLearnWord);
@@ -50,7 +50,10 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
     emit(const WordLearningLoading());
     final result = await _getWordsUseCase();
     if (result is DataSuccess) {
-      emit(WordLearningLoaded(result.data!, currentWordIndex: 0));
+      emit(WordLearningLoaded(
+          words: result.data!,
+          currentWordIndex: 0,
+          learnedWords: state.learnedWords));
     } else if (result is DataFailed) {
       emit(WordLearningError(result.message ?? ""));
     }
@@ -58,10 +61,16 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
 
   Future<void> _onLoadLearnedWords(
       LoadLearnedWords event, Emitter<WordLearningState> emit) async {
-    emit(const WordLearningLoading());
+    emit(WordLearningLoading(
+        currentWordIndex: state.currentWordIndex,
+        words: state.words,
+        learnedWords: state.learnedWords));
     final result = await _getLearnedWordsUsecase();
     if (result is DataSuccess) {
-      emit(WordLearningLoaded(result.data!, currentWordIndex: 0));
+      emit(WordLearningLoaded(
+          words: state.words,
+          currentWordIndex: state.currentWordIndex,
+          learnedWords: result.data!));
     } else if (result is DataFailed) {
       emit(WordLearningError(result.message ?? ""));
     }
@@ -69,14 +78,22 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
 
   Future<void> _onLearnWord(
       LearnWord event, Emitter<WordLearningState> emit) async {
-    emit(WordLearningLoading(currentWordIndex: state.currentWordIndex));
+    emit(WordLearningLoading(
+        currentWordIndex: state.currentWordIndex,
+        words: state.words,
+        learnedWords: state.learnedWords));
     final result = await _learnWordUsecase.call(params: event.word);
     if (result is DataSuccess) {
-      emit(WordLearningLearned(currentWordIndex: state.currentWordIndex));
+      emit(WordLearningLearned(
+          currentWordIndex: state.currentWordIndex,
+          words: state.words,
+          learnedWords: state.learnedWords));
       add(LoadLearnedWords());
     } else if (result is DataFailed) {
-      emit(WordLearningError(result.message ?? "",
-          currentWordIndex: state.currentWordIndex));
+      emit(WordLearningError(
+        result.message ?? "",
+        currentWordIndex: state.currentWordIndex,
+      ));
     }
   }
 
@@ -109,14 +126,18 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
   Future<void> _onSpeakWord(
       SpeakWord event, Emitter<WordLearningState> emit) async {
     emit(WordLearningSpeaking(event.word,
-        currentWordIndex: state.currentWordIndex));
+        currentWordIndex: state.currentWordIndex,
+        words: state.words,
+        learnedWords: state.learnedWords));
     final result = await _speakWordUsecase.call(params: event.word.word);
     if (result is DataSuccess) {
       if (state is WordLearningLoaded) {
-        emit(WordLearningLoaded((state as WordLearningLoaded).words,
-            currentWordIndex: state.currentWordIndex));
+        emit(WordLearningLoaded(
+            words: (state as WordLearningLoaded).words,
+            currentWordIndex: state.currentWordIndex,
+            learnedWords: state.learnedWords));
       } else {
-        emit(const WordLearningInitial());
+        emit(WordLearningInitial());
       }
     } else if (result is DataFailed) {
       emit(WordLearningError(result.message ?? "",
@@ -130,8 +151,9 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
       final loadedState = state as WordLearningLoaded;
       final nextIndex = loadedState.currentWordIndex + 1;
       if (nextIndex < loadedState.words.length) {
-        emit(
-            WordLearningLoaded(loadedState.words, currentWordIndex: nextIndex));
+        add(LearnWord(loadedState.words[state.currentWordIndex]));
+        emit(WordLearningLoaded(
+            words: loadedState.words, currentWordIndex: nextIndex));
       }
     }
   }
@@ -142,8 +164,8 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
       final loadedState = state as WordLearningLoaded;
       final prevIndex = loadedState.currentWordIndex - 1;
       if (prevIndex >= 0) {
-        emit(
-            WordLearningLoaded(loadedState.words, currentWordIndex: prevIndex));
+        emit(WordLearningLoaded(
+            words: loadedState.words, currentWordIndex: prevIndex));
       }
     }
   }
