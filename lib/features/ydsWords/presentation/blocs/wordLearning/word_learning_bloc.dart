@@ -43,6 +43,7 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
     on<SpeakWord>(_onSpeakWord);
     on<NextWord>(_onNextWord); // Yeni olay
     on<PreviousWord>(_onPreviousWord); // Yeni olay
+    on<FilterLearnedWords>(_filterLearnedWords);
   }
 
   Future<void> _onLoadWords(
@@ -53,7 +54,8 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
       emit(WordLearningLoaded(
           words: result.data!,
           currentWordIndex: 0,
-          learnedWords: state.learnedWords));
+          learnedWords: state.learnedWords,
+          filteredLearnedWords: state.filteredLearnedWords));
     } else if (result is DataFailed) {
       emit(WordLearningError(result.message ?? ""));
     }
@@ -62,15 +64,19 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
   Future<void> _onLoadLearnedWords(
       LoadLearnedWords event, Emitter<WordLearningState> emit) async {
     emit(WordLearningLoading(
-        currentWordIndex: state.currentWordIndex,
-        words: state.words,
-        learnedWords: state.learnedWords));
+      currentWordIndex: state.currentWordIndex,
+      words: state.words,
+      learnedWords: state.learnedWords,
+      filteredLearnedWords: state.filteredLearnedWords,
+    ));
     final result = await _getLearnedWordsUsecase();
     if (result is DataSuccess) {
       emit(WordLearningLoaded(
-          words: state.words,
-          currentWordIndex: state.currentWordIndex,
-          learnedWords: result.data!));
+        words: state.words,
+        currentWordIndex: state.currentWordIndex,
+        learnedWords: result.data!,
+        filteredLearnedWords: state.filteredLearnedWords,
+      ));
     } else if (result is DataFailed) {
       emit(WordLearningError(result.message ?? ""));
     }
@@ -81,13 +87,15 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
     emit(WordLearningLoading(
         currentWordIndex: state.currentWordIndex,
         words: state.words,
-        learnedWords: state.learnedWords));
+        learnedWords: state.learnedWords,
+        filteredLearnedWords: state.filteredLearnedWords));
     final result = await _learnWordUsecase.call(params: event.word);
     if (result is DataSuccess) {
       emit(WordLearningLearned(
           currentWordIndex: state.currentWordIndex,
           words: state.words,
-          learnedWords: state.learnedWords));
+          learnedWords: state.learnedWords,
+          filteredLearnedWords: state.filteredLearnedWords));
       add(LoadLearnedWords());
     } else if (result is DataFailed) {
       emit(WordLearningError(
@@ -99,10 +107,18 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
 
   Future<void> _onDeleteLearnedWord(
       DeleteLearnedWord event, Emitter<WordLearningState> emit) async {
-    emit(WordLearningLoading(currentWordIndex: state.currentWordIndex));
+    emit(WordLearningLoading(
+        currentWordIndex: state.currentWordIndex,
+        learnedWords: state.learnedWords,
+        words: state.words,
+        filteredLearnedWords: state.filteredLearnedWords));
     final result = await _deleteLearnedWordUsecase.call(params: event.word);
     if (result is DataSuccess) {
-      emit(WordLearningDeleted(currentWordIndex: state.currentWordIndex));
+      emit(WordLearningDeleted(
+          currentWordIndex: state.currentWordIndex,
+          learnedWords: state.learnedWords,
+          words: state.words,
+          filteredLearnedWords: state.filteredLearnedWords));
       add(LoadLearnedWords());
     } else if (result is DataFailed) {
       emit(WordLearningError(result.message ?? "",
@@ -128,14 +144,16 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
     emit(WordLearningSpeaking(event.word,
         currentWordIndex: state.currentWordIndex,
         words: state.words,
-        learnedWords: state.learnedWords));
+        learnedWords: state.learnedWords,
+        filteredLearnedWords: state.filteredLearnedWords));
     final result = await _speakWordUsecase.call(params: event.word.word);
     if (result is DataSuccess) {
       if (state is WordLearningLoaded) {
         emit(WordLearningLoaded(
             words: (state as WordLearningLoaded).words,
             currentWordIndex: state.currentWordIndex,
-            learnedWords: state.learnedWords));
+            learnedWords: state.learnedWords,
+            filteredLearnedWords: state.filteredLearnedWords));
       } else {
         emit(WordLearningInitial());
       }
@@ -153,7 +171,10 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
       if (nextIndex < loadedState.words.length) {
         add(LearnWord(loadedState.words[state.currentWordIndex]));
         emit(WordLearningLoaded(
-            words: loadedState.words, currentWordIndex: nextIndex));
+            words: loadedState.words,
+            currentWordIndex: nextIndex,
+            learnedWords: loadedState.learnedWords,
+            filteredLearnedWords: loadedState.filteredLearnedWords));
       }
     }
   }
@@ -165,8 +186,35 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
       final prevIndex = loadedState.currentWordIndex - 1;
       if (prevIndex >= 0) {
         emit(WordLearningLoaded(
-            words: loadedState.words, currentWordIndex: prevIndex));
+            words: loadedState.words,
+            currentWordIndex: prevIndex,
+            learnedWords: loadedState.learnedWords,
+            filteredLearnedWords: loadedState.filteredLearnedWords));
       }
     }
+  }
+
+  Future<void> _filterLearnedWords(
+      FilterLearnedWords event, Emitter<WordLearningState> emit) async {
+    emit(WordLearningLoading(
+        currentWordIndex: state.currentWordIndex,
+        words: state.words,
+        learnedWords: state.learnedWords,
+        filteredLearnedWords: state.filteredLearnedWords));
+    List<WordEntity> filteredWords = [];
+    if (event.wordType == "All") {
+      filteredWords = state.learnedWords;
+    } else {
+      filteredWords = state.learnedWords
+          .where((element) =>
+              element.type.toLowerCase() == event.wordType.toLowerCase())
+          .toList();
+    }
+    emit(WordLearningLoaded(
+      words: state.words,
+      currentWordIndex: state.currentWordIndex,
+      learnedWords: state.learnedWords,
+      filteredLearnedWords: filteredWords,
+    ));
   }
 }
