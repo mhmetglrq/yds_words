@@ -2,28 +2,34 @@ part of 'word_learning_bloc.dart';
 
 sealed class WordLearningState extends Equatable {
   final int currentWordIndex; // Artık sabit değil, alt sınıflarda ayarlanacak
+  final List<WordEntity> words;
+  final List<WordEntity> learnedWords;
 
-  const WordLearningState({this.currentWordIndex = 0});
+  const WordLearningState(
+      {this.currentWordIndex = 0,
+      this.words = const [],
+      this.learnedWords = const []});
 
   @override
-  List<Object> get props => [currentWordIndex];
+  List<Object> get props => [currentWordIndex, words, learnedWords];
 }
 
 final class WordLearningInitial extends WordLearningState {
-  const WordLearningInitial() : super(currentWordIndex: 0);
+  WordLearningInitial()
+      : super(currentWordIndex: 0, words: [], learnedWords: []);
 }
 
 final class WordLearningLoading extends WordLearningState {
-  const WordLearningLoading({super.currentWordIndex});
+  const WordLearningLoading(
+      {super.currentWordIndex, super.words, super.learnedWords});
 }
 
 final class WordLearningLoaded extends WordLearningState {
-  final List<WordEntity> words;
-
-  const WordLearningLoaded(this.words, {super.currentWordIndex});
+  const WordLearningLoaded(
+      {super.currentWordIndex, super.words, super.learnedWords});
 
   @override
-  List<Object> get props => [words, currentWordIndex];
+  List<Object> get props => [words, currentWordIndex, learnedWords];
 }
 
 final class WordLearningError extends WordLearningState {
@@ -35,8 +41,9 @@ final class WordLearningError extends WordLearningState {
   List<Object> get props => [message, currentWordIndex];
 }
 
-final class WordLearningLearned extends WordLearningState {
-  const WordLearningLearned({super.currentWordIndex});
+final class WordLearningLearned extends WordLearningLoaded {
+  const WordLearningLearned(
+      {super.currentWordIndex, super.words, super.learnedWords});
 }
 
 final class WordLearningDeleted extends WordLearningState {
@@ -47,10 +54,11 @@ final class WordLearningDeletedAll extends WordLearningState {
   const WordLearningDeletedAll({super.currentWordIndex});
 }
 
-final class WordLearningSpeaking extends WordLearningState {
+final class WordLearningSpeaking extends WordLearningLoaded {
   final WordEntity spokenWord;
 
-  const WordLearningSpeaking(this.spokenWord, {super.currentWordIndex});
+  const WordLearningSpeaking(this.spokenWord,
+      {super.currentWordIndex, super.words, super.learnedWords});
 
   @override
   List<Object> get props => [spokenWord, currentWordIndex];

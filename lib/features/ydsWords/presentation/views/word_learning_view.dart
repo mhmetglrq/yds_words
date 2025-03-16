@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:yds_words/config/extensions/context_extension.dart';
+import '../../../../config/items/colors/app_colors.dart';
 import '../blocs/wordLearning/word_learning_bloc.dart';
 
 class WordLearningView extends StatelessWidget {
@@ -16,7 +17,7 @@ class WordLearningView extends StatelessWidget {
         padding: context.paddingDefault,
         child: BlocBuilder<WordLearningBloc, WordLearningState>(
           builder: (context, state) {
-            if (state is WordLearningLoading) {
+            if (state is WordLearningLoading || state is WordLearningInitial) {
               return const Center(child: CircularProgressIndicator());
             } else if (state is WordLearningLoaded) {
               final currentWord = state.words[state.currentWordIndex];
@@ -25,7 +26,10 @@ class WordLearningView extends StatelessWidget {
                   AspectRatio(
                     aspectRatio: 16 / 9,
                     child: Container(
-                      color: Colors.red,
+                      decoration: BoxDecoration(
+                        color: AppColors.kPrimaryColor,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
                       child: Padding(
                         padding: context.paddingLow,
                         child: Stack(
@@ -78,70 +82,43 @@ class WordLearningView extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(height: 16),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      if (state.currentWordIndex > 0)
+                  Padding(
+                    padding: context.paddingVerticalDefault,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        if (state.currentWordIndex > 0)
+                          ElevatedButton(
+                            onPressed: () {
+                              context
+                                  .read<WordLearningBloc>()
+                                  .add(PreviousWord());
+                            },
+                            child: const Text("Previous Word"),
+                          )
+                        else
+                          const SizedBox(),
                         ElevatedButton(
-                          onPressed: () {
-                            context
-                                .read<WordLearningBloc>()
-                                .add(PreviousWord());
-                          },
-                          child: const Text("Previous Word"),
-                        )
-                      else
-                        const SizedBox(),
-                      ElevatedButton(
-                        onPressed:
-                            state.currentWordIndex < state.words.length - 1
-                                ? () {
-                                    context
-                                        .read<WordLearningBloc>()
-                                        .add(NextWord());
-                                  }
-                                : null, // Son kelimedeyse devre dışı bırak
-                        child: const Text("Next Word"),
-                      ),
-                    ],
-                  ),
-                  const SizedBox(height: 16),
-                  ElevatedButton(
-                    onPressed: () {
-                      context
-                          .read<WordLearningBloc>()
-                          .add(LearnWord(currentWord));
-                    },
-                    child: const Text("Learn This Word"),
-                  ),
-                ],
-              );
-            } else if (state is WordLearningSpeaking) {
-              return Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  AspectRatio(
-                    aspectRatio: 16 / 9,
-                    child: Container(
-                      color: Colors.red,
-                      child: Center(
-                        child: Text(
-                          "Speaking: ${state.spokenWord.word}",
-                          style: context.textTheme.bodyLarge
-                              ?.copyWith(color: Colors.white),
+                          onPressed:
+                              state.currentWordIndex < state.words.length - 1
+                                  ? () {
+                                      context
+                                          .read<WordLearningBloc>()
+                                          .add(NextWord());
+                                    }
+                                  : null, // Son kelimedeyse devre dışı bırak
+                          child: const Text("Next Word"),
                         ),
-                      ),
+                      ],
                     ),
                   ),
-                  const SizedBox(height: 16),
-                  const CircularProgressIndicator(),
                 ],
               );
-            } else if (state is WordLearningError) {
-              return Center(child: Text("Error: ${state.message}"));
+            } else {
+              return Center(
+                  child:
+                      Text("Error: ${(state as WordLearningError).message}"));
             }
-            return const Center(child: Text("No words loaded yet"));
           },
         ),
       ),

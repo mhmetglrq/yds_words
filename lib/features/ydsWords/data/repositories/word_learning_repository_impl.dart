@@ -14,7 +14,8 @@ import '../models/word_model.dart'; // WordModel'ı import ediyoruz
 class WordLearningRepositoryImpl implements WordLearningRepository {
   final HiveDatabaseService _hiveDatabaseService;
   final TextToSpeechService _ttsService;
-  static const String _boxName = 'learnedWords'; // Sabit bir box adı
+  final String _learnedWordsBoxName = 'learnedWords'; // Sabit bir box adı
+  final String _wordsBoxName = 'words'; // Sabit bir box adı
 
   WordLearningRepositoryImpl(this._hiveDatabaseService, this._ttsService);
 
@@ -23,17 +24,14 @@ class WordLearningRepositoryImpl implements WordLearningRepository {
     try {
       // Tüm öğrenilmiş kelimeleri silmek için box'ı temizliyoruz
       await _hiveDatabaseService.clearBox<WordModel>(
-        _boxName,
-        closeBoxAfterOperation: true,
+        _learnedWordsBoxName,
       );
-      return const DataSuccess(null); // Başarılıysa null dönüyoruz (void için)
+      return const DataSuccess(null);
     } on HiveError catch (e) {
-      // Hive ile ilgili bir hata varsa HiveExceptionCustom kullanıyoruz
       return DataFailed(
           exception:
               HiveExceptionCustom('Failed to delete all learned words: $e'));
     } catch (e) {
-      // Diğer hatalar için GenericException kullanıyoruz
       return DataFailed(
         exception: GenericException(
             'Unexpected error while deleting all learned words: $e'),
@@ -46,11 +44,10 @@ class WordLearningRepositoryImpl implements WordLearningRepository {
     try {
       // Belirli bir kelimeyi silmek için word'ün id'sini kullanıyoruz
       await _hiveDatabaseService.deleteData<WordModel>(
-        _boxName,
+        _learnedWordsBoxName,
         word.id,
-        closeBoxAfterOperation: true,
       );
-      return const DataSuccess(null); // Başarılıysa null dönüyoruz
+      return const DataSuccess(null);
     } on HiveError catch (e) {
       return DataFailed(
           exception: HiveExceptionCustom('Failed to delete learned word: $e'));
@@ -67,8 +64,7 @@ class WordLearningRepositoryImpl implements WordLearningRepository {
     try {
       // Tüm öğrenilmiş kelimeleri alıyoruz
       final words = await _hiveDatabaseService.getAllData<WordModel>(
-        _boxName,
-        closeBoxAfterOperation: true,
+        _learnedWordsBoxName,
       );
       // WordModel listesini WordEntity listesine dönüştürüyoruz
       return DataSuccess(words.map((model) => model as WordEntity).toList());
@@ -89,12 +85,11 @@ class WordLearningRepositoryImpl implements WordLearningRepository {
       // WordEntity'yi WordModel'a çevirip Hive'a kaydediyoruz
       final wordModel = WordModel.fromEntity(word);
       await _hiveDatabaseService.putData<WordModel>(
-        _boxName,
-        wordModel.id, // ID'yi key olarak kullanıyoruz
+        _learnedWordsBoxName,
+        wordModel.id,
         wordModel,
-        closeBoxAfterOperation: true,
       );
-      return const DataSuccess(null); // Başarılıysa null dönüyoruz
+      return const DataSuccess(null);
     } on HiveError catch (e) {
       return DataFailed(
           exception: HiveExceptionCustom('Failed to learn word: $e'));
@@ -108,25 +103,34 @@ class WordLearningRepositoryImpl implements WordLearningRepository {
   @override
   Future<DataState<List<WordEntity>>> getWords() async {
     try {
-      // JSON dosyasını assets'ten oku
-      final String jsonString =
-          await rootBundle.loadString(AssetEnum.ydsWords.toJson);
+      // Kelimeleri ilgili box'lardan çekiyoruz
+      final words = await _hiveDatabaseService.getAllData(
+        _wordsBoxName,
+      );
+      final learnedWords = await _hiveDatabaseService.getAllData(
+        _learnedWordsBoxName,
+      );
 
-      // JSON string'ini Dart nesnesine çevir
-      final List<dynamic> jsonList = jsonDecode(jsonString);
+      if (words.isNotEmpty) {
+        if (learnedWords.isNotEmpty) {
+          // Öğrenilmiş kelimeleri ID bazlı çıkarıyoruz
+          final unlearnedWords = words
+              .where((word) =>
+                  !learnedWords.any((learnedWord) => learnedWord.id == word.id))
+              .toList();
 
-      final List<WordModel> words = [];
-      // JSON verisini WordModel listesine dönüştür
-      for (int i = 0; i < jsonList.length; i++) {
-        words.add(WordModel.fromJson(jsonList[i]).copyWith(id: i.toString()));
+          return DataSuccess(
+              unlearnedWords.map((model) => model as WordEntity).toList());
+        } else {
+          return DataSuccess(
+              words.map((model) => model as WordEntity).toList());
+        }
+      } else {
+        return getWordsFromJsonAndSaveLocal();
       }
-      words.shuffle(); // Kelimeleri karıştır
-
-      // WordModel listesini WordEntity listesine çevir ve dön
-      return DataSuccess(words.map((model) => model as WordEntity).toList());
     } catch (e) {
       return DataFailed(
-        exception: GenericException('Failed to load words from JSON: $e'),
+        exception: GenericException('Failed to load words: $e'),
       );
     }
   }
@@ -134,13 +138,42 @@ class WordLearningRepositoryImpl implements WordLearningRepository {
   @override
   Future<DataState<void>> speakWord(String word) async {
     try {
-      // Kelimeyi İngilizce olarak seslendir
-      await _ttsService.setLanguage('en-US'); // Dil ayarını yap
-      await _ttsService.speak(word); // Kelimeyi seslendir
+      // Kelimeyi seslendirmek için TTS servisini kullanıyoruz
+      await _ttsService.setLanguage('en-US');
+      await _ttsService.speak(word);
       return const DataSuccess(null);
     } catch (e) {
       return DataFailed(
         exception: GenericException('Failed to speak word: $e'),
+      );
+    }
+  }
+
+  Future<DataState<List<WordEntity>>> getWordsFromJsonAndSaveLocal() async {
+    try {
+      // JSON dosyasını assets'ten okuyup listeye çeviriyoruz
+      final String jsonString =
+          await rootBundle.loadString(AssetEnum.ydsWords.toJson);
+      final List<dynamic> jsonList = jsonDecode(jsonString);
+      jsonList.shuffle();
+
+      final List<WordModel> words = [];
+      for (int i = 0; i < jsonList.length; i++) {
+        words.add(WordModel.fromJson(jsonList[i]).copyWith(id: i.toString()));
+      }
+
+      // Tüm kelimeleri Hive'a kaydediyoruz
+      for (var word in words) {
+        await _hiveDatabaseService.putData<WordModel>(
+          _wordsBoxName,
+          word.id,
+          word,
+        );
+      }
+      return DataSuccess(words.map((model) => model as WordEntity).toList());
+    } catch (e) {
+      return DataFailed(
+        exception: GenericException('Failed to load words from JSON: $e'),
       );
     }
   }
