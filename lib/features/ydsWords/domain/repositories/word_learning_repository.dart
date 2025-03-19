@@ -8,4 +8,5 @@ abstract class WordLearningRepository {
   Future<DataState<void>> deleteAllLearnedWords();
   Future<DataState<List<WordEntity>>> getWords();
   Future<DataState<void>> speakWord(String word);
+  Future<DataState<WordEntity>> getRandomWordForWidget();
 }

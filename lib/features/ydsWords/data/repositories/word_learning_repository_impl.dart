@@ -2,6 +2,7 @@ import 'dart:convert';
 
 import 'package:flutter/services.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:home_widget/home_widget.dart';
 import 'package:yds_words/core/resources/data_state.dart';
 import 'package:yds_words/features/ydsWords/data/dataSources/local/hive_database_service.dart';
 import 'package:yds_words/features/ydsWords/domain/entities/word_entity.dart';
@@ -174,6 +175,43 @@ class WordLearningRepositoryImpl implements WordLearningRepository {
     } catch (e) {
       return DataFailed(
         exception: GenericException('Failed to load words from JSON: $e'),
+      );
+    }
+  }
+
+  @override
+  Future<DataState<WordEntity>> getRandomWordForWidget() async {
+    try {
+      final wordsResult = await getWords(); // Mevcut öğrenilmemiş kelimeleri al
+      if (wordsResult is DataSuccess && wordsResult.data!.isNotEmpty) {
+        final words = wordsResult.data!;
+        final randomIndex =
+            DateTime.now().millisecondsSinceEpoch % words.length;
+        return DataSuccess(words[randomIndex]);
+      } else {
+        return DataFailed(
+          exception: GenericException('No unlearned words available'),
+        );
+      }
+    } catch (e) {
+      return DataFailed(
+        exception: GenericException('Failed to get random word for widget: $e'),
+      );
+    }
+  }
+
+  Future<void> updateWidgetWithRandomWord() async {
+    final result = await getRandomWordForWidget();
+    if (result is DataSuccess) {
+      final wordEntity = result.data!;
+      // Widget’a kelime ve anlamını gönder
+      await HomeWidget.saveWidgetData<String>('word_text', wordEntity.word);
+      await HomeWidget.saveWidgetData<String>(
+          'meaning_text', wordEntity.translation);
+      // Android ve iOS için widget’ı güncelle
+      await HomeWidget.updateWidget(
+        name: 'WordWidgetProvider', // Android
+        iOSName: 'WordWidget', // iOS
       );
     }
   }
