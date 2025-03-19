@@ -5,6 +5,7 @@ import 'package:yds_words/features/ydsWords/domain/usecases/wordLearning/get_lea
 import 'package:yds_words/features/ydsWords/domain/usecases/wordLearning/get_words_usecase.dart';
 import 'package:yds_words/features/ydsWords/domain/usecases/wordLearning/learn_word_usecase.dart';
 
+import '../../features/ydsWords/data/dataSources/local/widget_updater.dart';
 import '../../features/ydsWords/data/repositories/word_learning_repository_impl.dart';
 import '../../features/ydsWords/domain/repositories/word_learning_repository.dart';
 import '../../features/ydsWords/domain/usecases/wordLearning/speak_word_usecase.dart';
@@ -17,6 +18,10 @@ class WordLearningInjection {
     // Repositories
     sl.registerLazySingleton<WordLearningRepository>(
         () => WordLearningRepositoryImpl(sl(), sl()));
+
+    sl.registerLazySingleton<WidgetUpdater>(
+      () => WidgetUpdater(sl<WordLearningRepository>()),
+    );
 
     // Usecases
     sl.registerLazySingleton<DeleteAllLearnedWordsUsecase>(
