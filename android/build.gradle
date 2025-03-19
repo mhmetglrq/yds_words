@@ -2,6 +2,22 @@ allprojects {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url 'https://storage.googleapis.com/download.flutter.io'
+        }
+    }
+}
+
+
+buildscript {
+    ext.kotlin_version = '1.9.0' // Kullandığınız Kotlin sürümüne göre ayarlayın
+    repositories {
+        google()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.0'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
