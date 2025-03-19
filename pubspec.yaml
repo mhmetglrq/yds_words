@@ -26,6 +26,9 @@ dependencies:
   hive_flutter: ^1.1.0
   hive_generator: ^2.0.1
   flutter_tts: ^4.2.2
+  home_widget: ^0.7.0
+  workmanager: ^0.5.1
+  shared_preferences: ^2.5.2
 
 dev_dependencies:
   flutter_test:

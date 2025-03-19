@@ -1,35 +1,51 @@
 import 'package:get_it/get_it.dart';
+import 'package:workmanager/workmanager.dart';
 import '../../features/ydsWords/data/dataSources/local/hive_database_service.dart';
 import '../../features/ydsWords/data/dataSources/local/text_to_speech_service.dart';
+import '../../features/ydsWords/data/dataSources/local/widget_updater.dart';
 import '../../features/ydsWords/data/models/word_model.dart';
 import 'word_learning_injection.dart';
 
 final sl = GetIt.instance;
+void callbackDispatcher() {
+  Workmanager().executeTask((task, inputData) async {
+    final widgetUpdater = sl<WidgetUpdater>();
+    await widgetUpdater.updateWidget();
+    print("WorkManager çalıştı: ${DateTime.now()}"); // Debug için
+    return Future.value(true);
+  });
+}
 
 class AppInjection {
   static Future<void> init() async {
-    // HiveDatabaseService'i kaydet
     sl.registerLazySingleton<HiveDatabaseService>(
       () => HiveDatabaseService.instance,
     );
 
-    // Hive başlatma ve adapter kaydı
     HiveDatabaseService.registerAdapter(WordModelAdapter());
-    await HiveDatabaseService.init(); // await ekledik
+    await HiveDatabaseService.init();
 
-    // TextToSpeechService
     sl.registerLazySingleton<TextToSpeechService>(
       () => TextToSpeechService(),
     );
 
-    // WordLearning modülünü başlat
     WordLearningInjection.init();
+
+    await Workmanager().initialize(
+      callbackDispatcher,
+      isInDebugMode: true,
+    );
+
+    Workmanager().registerPeriodicTask(
+      "wordWidgetUpdate",
+      "updateWordWidget",
+      frequency: const Duration(minutes: 30), // 30 dakika
+      initialDelay: const Duration(seconds: 10),
+    );
   }
 
   static void dispose() {
-    // Hive kaynaklarını temizle
     sl<HiveDatabaseService>().closeAllBoxes();
-    // TTS için özel bir dispose gerekmez, ama stop etmek isterseniz:
     sl<TextToSpeechService>().stop();
   }
 }
