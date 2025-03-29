@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:home_widget/home_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:yds_words/core/resources/data_state.dart';
@@ -14,8 +16,7 @@ class WidgetUpdater {
         await _wordLearningRepository.getRandomWordForWidget();
     if (result is DataSuccess) {
       final wordEntity = result.data!;
-      print(
-          "Gönderilen kelime: ${wordEntity.word}, Anlam: ${wordEntity.translation}");
+      log("Gönderilen kelime: ${wordEntity.word}, Anlam: ${wordEntity.translation}");
       final SharedPreferences prefs = await SharedPreferences.getInstance();
       // Veri yazımını kontrol et
       final wordSaved =
@@ -25,16 +26,15 @@ class WidgetUpdater {
           //  await HomeWidget.saveWidgetData<String>(
           //     'meaning_text', wordEntity.translation);
           await prefs.setString("meaning_text", wordEntity.translation);
-      print(
-          "Kelime kaydedildi mi? $wordSaved, Anlam kaydedildi mi? $meaningSaved");
+      log("Kelime kaydedildi mi? $wordSaved, Anlam kaydedildi mi? $meaningSaved");
 
       final updateSuccess = await HomeWidget.updateWidget(
         name: 'WordWidgetProvider',
         iOSName: 'WordWidget',
       );
-      print("Widget güncelleme başarılı mı? $updateSuccess");
+      log("Widget güncelleme başarılı mı? $updateSuccess");
     } else {
-      print("Hata: ${result.message}");
+      log("Hata: ${result.message}");
     }
   }
 }

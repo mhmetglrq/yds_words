@@ -69,15 +69,18 @@ class Home extends StatelessWidget {
               ),
               ElevatedButton(
                 onPressed: () async {
+                  await HomeWidget.setAppGroupId('group.com.example.yds-words');
                   final wordSaved = await HomeWidget.saveWidgetData<String>(
-                      'word_text', 'TestKelime');
+                      'word_text', 'Memo');
                   final meaningSaved = await HomeWidget.saveWidgetData<String>(
-                      'meaning_text', 'TestAnlam');
-                  final updateSuccess =
-                      await HomeWidget.updateWidget(name: 'WordWidgetProvider');
-                  WidgetUpdater updater =
-                      WidgetUpdater(sl<WordLearningRepository>());
-                  await updater.updateWidget();
+                      'meaning_text', 'Memo Anlamı');
+                  final updateSuccess = await HomeWidget.updateWidget(
+                    name: 'WordWidgetProvider',
+                    iOSName: 'WordWidget',
+                  );
+                  // WidgetUpdater updater =
+                  //     WidgetUpdater(sl<WordLearningRepository>());
+                  // await updater.updateWidget();
                 },
                 child: Text('Test Veri Gönder'),
               ),
