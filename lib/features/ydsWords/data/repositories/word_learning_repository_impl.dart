@@ -107,9 +107,11 @@ class WordLearningRepositoryImpl implements WordLearningRepository {
       // Kelimeleri ilgili box'lardan çekiyoruz
       final words = await _hiveDatabaseService.getAllData(
         _wordsBoxName,
+        closeBoxAfterOperation: true
       );
       final learnedWords = await _hiveDatabaseService.getAllData(
         _learnedWordsBoxName,
+        closeBoxAfterOperation: true,
       );
 
       if (words.isNotEmpty) {
@@ -165,7 +167,7 @@ class WordLearningRepositoryImpl implements WordLearningRepository {
 
       // Tüm kelimeleri Hive'a kaydediyoruz
       for (var word in words) {
-        await _hiveDatabaseService.putData<WordModel>(
+        await _hiveDatabaseService.putData(
           _wordsBoxName,
           word.id,
           word,
