@@ -1,3 +1,6 @@
+import 'dart:io';
+import 'dart:async';
+
 import 'package:get_it/get_it.dart';
 import 'package:workmanager/workmanager.dart';
 import '../../features/ydsWords/data/dataSources/local/hive_database_service.dart';
@@ -11,7 +14,6 @@ void callbackDispatcher() {
   Workmanager().executeTask((task, inputData) async {
     final widgetUpdater = sl<WidgetUpdater>();
     await widgetUpdater.updateWidget();
-    print("WorkManager çalıştı: ${DateTime.now()}"); // Debug için
     return Future.value(true);
   });
 }
@@ -36,12 +38,25 @@ class AppInjection {
       isInDebugMode: true,
     );
 
-    Workmanager().registerPeriodicTask(
-      "wordWidgetUpdate",
-      "updateWordWidget",
-      frequency: const Duration(minutes: 30), // 30 dakika
-      initialDelay: const Duration(seconds: 10),
-    );
+    // Widget'ı ilk açılışta güncelle
+    if (Platform.isIOS) {
+      final widgetUpdater = sl<WidgetUpdater>();
+      await widgetUpdater.updateWidget();
+
+      // iOS için de periyodik görev ekle
+      Timer.periodic(const Duration(minutes: 15), (_) async {
+        await widgetUpdater.updateWidget();
+      });
+    }
+
+    if (Platform.isAndroid) {
+      Workmanager().registerPeriodicTask(
+        "wordWidgetUpdate",
+        "updateWordWidget",
+        frequency: const Duration(minutes: 15),
+        initialDelay: const Duration(seconds: 10),
+      );
+    }
   }
 
   static void dispose() {

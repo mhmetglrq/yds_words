@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 2x2 widget için -->
+    <dimen name="widget_padding">12dp</dimen>
+    <dimen name="widget_text_large">18sp</dimen>
+    <dimen name="widget_text_medium">14sp</dimen>
+    <dimen name="widget_text_small">12sp</dimen>
+    <dimen name="widget_icon_size">20dp</dimen>
+    <dimen name="widget_divider_margin">6dp</dimen>
+</resources>
