@@ -1,4 +1,5 @@
 import 'dart:developer';
+import 'dart:io';
 
 import 'package:home_widget/home_widget.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -15,24 +16,38 @@ class WidgetUpdater {
     final DataState<WordEntity> result =
         await _wordLearningRepository.getRandomWordForWidget();
     if (result is DataSuccess) {
+      await HomeWidget.setAppGroupId('group.com.example.yds-words');
       final wordEntity = result.data!;
-      log("Gönderilen kelime: ${wordEntity.word}, Anlam: ${wordEntity.translation}");
       final SharedPreferences prefs = await SharedPreferences.getInstance();
-      // Veri yazımını kontrol et
-      final wordSaved =
-          // await HomeWidget.saveWidgetData<String>('word_text', wordEntity.word);
-          await prefs.setString("word_text", wordEntity.word);
-      final meaningSaved =
-          //  await HomeWidget.saveWidgetData<String>(
-          //     'meaning_text', wordEntity.translation);
-          await prefs.setString("meaning_text", wordEntity.translation);
-      log("Kelime kaydedildi mi? $wordSaved, Anlam kaydedildi mi? $meaningSaved");
 
-      final updateSuccess = await HomeWidget.updateWidget(
-        name: 'WordWidgetProvider',
-        iOSName: 'WordWidget',
-      );
-      log("Widget güncelleme başarılı mı? $updateSuccess");
+      await prefs.setString("word_text", wordEntity.word);
+      await prefs.setString("meaning_text", wordEntity.translation);
+      await prefs.setString("word_type", wordEntity.type);
+
+      if (Platform.isIOS) {
+        // iOS için widget'ı zorla güncelle
+        await HomeWidget.saveWidgetData<String>('word_text', wordEntity.word);
+        await HomeWidget.saveWidgetData<String>(
+            'meaning_text', wordEntity.translation);
+        await HomeWidget.saveWidgetData<String>('word_type', wordEntity.type);
+
+        // Widget'ı birkaç kez güncellemeyi dene
+        for (var i = 0; i < 3; i++) {
+          final updateSuccess = await HomeWidget.updateWidget(
+            name: 'WordWidgetProvider',
+            iOSName: 'WordWidget',
+            qualifiedAndroidName: '',
+          );
+          log("iOS Widget güncelleme denemesi ${i + 1}: $updateSuccess");
+          await Future.delayed(const Duration(seconds: 1));
+        }
+      } else {
+        final updateSuccess = await HomeWidget.updateWidget(
+          name: 'WordWidgetProvider',
+          iOSName: 'WordWidget',
+        );
+        log("Widget güncelleme başarılı mı? $updateSuccess");
+      }
     } else {
       log("Hata: ${result.message}");
     }

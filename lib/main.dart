@@ -16,7 +16,6 @@ Future<void> main() async {
     if (call.method == 'updateWidget') {
       final widgetUpdater = sl<WidgetUpdater>();
       await widgetUpdater.updateWidget();
-      print("MethodChannel tetiklendi: ${DateTime.now()}");
     }
   });
 
