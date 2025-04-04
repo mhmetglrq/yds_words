@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 3x3 ve üzeri widget için -->
+    <dimen name="widget_padding">16dp</dimen>
+    <dimen name="widget_text_large">24sp</dimen>
+    <dimen name="widget_text_medium">18sp</dimen>
+    <dimen name="widget_icon_size">24dp</dimen>
+    <dimen name="widget_divider_margin">8dp</dimen>
+</resources> 

@@ -70,11 +70,13 @@ class WordWidgetProvider : AppWidgetProvider() {
             val prefs = context.getSharedPreferences("FlutterSharedPreferences", Context.MODE_PRIVATE)
             val word = prefs.getString("flutter.word_text", "Kelime") ?: "1"
             val meaning = prefs.getString("flutter.meaning_text", "Anlam") ?: "2"
+            val wordType = prefs.getString("flutter.meaning_text","Tip") ?:"3"
             Log.d("WidgetUpdate", "Okunan kelime: $word, Anlam: $meaning")
 
             // TextView’lara kelime ve anlamı set et
             views.setTextViewText(R.id.word_text, word)
             views.setTextViewText(R.id.meaning_text, meaning)
+            views.setTextViewText(R.id.word_type,wordType)
 
             // Hoparlör ikonuna tıklama işlevi ekle
             val speakIntent = Intent(context, WordWidgetProvider::class.java).apply {
