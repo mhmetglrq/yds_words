@@ -206,12 +206,12 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
         learnedWords: state.learnedWords,
         filteredLearnedWords: state.filteredLearnedWords));
     List<WordEntity> filteredWords = [];
-    if (event.wordType == "All") {
+    if (event.wordType.toLowerCase().contains("All".toLowerCase())) {
       filteredWords = state.learnedWords;
     } else {
       filteredWords = state.learnedWords
           .where((element) =>
-              element.type.toLowerCase() == event.wordType.toLowerCase())
+              event.wordType.toLowerCase().contains(element.type.toLowerCase()))
           .toList();
     }
     emit(WordLearningLoaded(
