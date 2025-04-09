@@ -4,7 +4,7 @@ sealed class WordLearningEvent extends Equatable {
   const WordLearningEvent();
 
   @override
-  List<Object> get props => [];
+  List<Object?> get props => [];
 }
 
 class LoadWords extends WordLearningEvent {}
@@ -40,8 +40,8 @@ class NextWord extends WordLearningEvent {} // Yeni olay
 class PreviousWord extends WordLearningEvent {} // Yeni olay
 
 class FilterLearnedWords extends WordLearningEvent {
-  final String wordType;
-  const FilterLearnedWords(this.wordType);
+  final String? wordType;
+  const FilterLearnedWords({this.wordType});
   @override
-  List<Object> get props => [wordType];
+  List<Object?> get props => [wordType];
 }

@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:get_it/get_it.dart';
 import 'package:workmanager/workmanager.dart';
+import 'package:yds_words/core/injections/question_injection.dart';
 import '../../features/ydsWords/data/dataSources/local/hive_database_service.dart';
 import '../../features/ydsWords/data/dataSources/local/text_to_speech_service.dart';
 import '../../features/ydsWords/data/dataSources/local/widget_updater.dart';
@@ -32,6 +33,7 @@ class AppInjection {
     );
 
     WordLearningInjection.init();
+    QuestionInjection.init();
 
     await Workmanager().initialize(
       callbackDispatcher,
@@ -62,5 +64,7 @@ class AppInjection {
   static void dispose() {
     sl<HiveDatabaseService>().closeAllBoxes();
     sl<TextToSpeechService>().stop();
+    QuestionInjection.dispose();
+    WordLearningInjection.dispose();
   }
 }

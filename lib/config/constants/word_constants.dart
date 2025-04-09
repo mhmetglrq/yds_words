@@ -1,5 +1,5 @@
 class WordConstants {
-  static List<String> wordTypes = [
+  static const List<String> wordTypes = [
     "All (Hepsi)",
     "Noun (İsim)",
     "Verb (Fiil)",

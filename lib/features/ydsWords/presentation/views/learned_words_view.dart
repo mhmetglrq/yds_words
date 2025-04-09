@@ -4,6 +4,12 @@ import 'package:yds_words/config/constants/word_constants.dart';
 import 'package:yds_words/config/extensions/context_extension.dart';
 import 'package:yds_words/features/ydsWords/presentation/blocs/wordLearning/word_learning_bloc.dart';
 
+import '../../../../config/items/colors/app_colors.dart';
+import '../../../../config/router/route_names.dart';
+import '../../domain/entities/test_question_entity.dart';
+import '../blocs/question/question_bloc.dart';
+import '../widgets/word_type_card.dart';
+
 class LearnedWordsView extends StatelessWidget {
   const LearnedWordsView({super.key});
 
@@ -19,6 +25,97 @@ class LearnedWordsView extends StatelessWidget {
           child: Column(
             children: [
               Padding(
+                padding: context.paddingbottomLow,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 9,
+                      child: AspectRatio(
+                        aspectRatio: 1,
+                        child: MaterialButton(
+                          onPressed: () {
+                            context
+                                .read<QuestionBloc>()
+                                .add(QuestionStarted(TestQuestionType.meaning));
+                            Navigator.pushNamed(
+                                context, RouteNames.questionView);
+                          },
+                          color: AppColors.kSecondaryColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: context.paddingDefault,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "🔁",
+                                  style:
+                                      context.textTheme.headlineLarge?.copyWith(
+                                    color: AppColors.kWhiteColor,
+                                  ),
+                                ),
+                                Text(
+                                  "Kelimeleri Tekrar Gözden Geçir",
+                                  style: context.textTheme.titleSmall?.copyWith(
+                                    color: AppColors.kWhiteColor,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Spacer(
+                      flex: 1,
+                    ),
+                    Expanded(
+                      flex: 9,
+                      child: AspectRatio(
+                        aspectRatio: 1,
+                        child: MaterialButton(
+                          onPressed: () {
+                            context.read<QuestionBloc>().add(QuestionStarted(
+                                TestQuestionType.sentenceTranslation));
+                            Navigator.pushNamed(
+                                context, RouteNames.questionView);
+                          },
+                          color: AppColors.kSecondaryColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: context.paddingDefault,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "✍️",
+                                  style:
+                                      context.textTheme.headlineLarge?.copyWith(
+                                    color: AppColors.kWhiteColor,
+                                  ),
+                                ),
+                                Text(
+                                  "Kelimeleri Cümle İçinde Gör",
+                                  style: context.textTheme.titleSmall?.copyWith(
+                                    color: AppColors.kWhiteColor,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
                 padding: context.paddingVerticalLow,
                 child: ConstrainedBox(
                   constraints: BoxConstraints(
@@ -30,24 +127,7 @@ class LearnedWordsView extends StatelessWidget {
                     itemCount: WordConstants.wordTypes.length,
                     itemBuilder: (BuildContext context, int index) {
                       final wordType = WordConstants.wordTypes[index];
-                      return InkWell(
-                        onTap: () => context
-                            .read<WordLearningBloc>()
-                            .add(FilterLearnedWords(wordType)),
-                        borderRadius: BorderRadius.circular(10),
-                        child: Card(
-                          shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Padding(
-                            padding: context.paddingDefault,
-                            child: Center(
-                              child: Text(wordType,
-                                  style: context.textTheme.titleSmall),
-                            ),
-                          ),
-                        ),
-                      );
+                      return WordTypeCard(wordType: wordType);
                     },
                   ),
                 ),
@@ -91,8 +171,8 @@ class LearnedWordsView extends StatelessWidget {
                       ),
                     );
                   } else {
-                    return const Center(
-                      child: Text("Error"),
+                    return Center(
+                      child: Text((state as WordLearningError).message),
                     );
                   }
                 },
