@@ -4,6 +4,10 @@ import 'package:yds_words/config/constants/word_constants.dart';
 import 'package:yds_words/config/extensions/context_extension.dart';
 import 'package:yds_words/features/ydsWords/presentation/blocs/wordLearning/word_learning_bloc.dart';
 
+import '../../../../config/items/colors/app_colors.dart';
+import '../../../../config/router/route_names.dart';
+import '../../domain/entities/test_question_entity.dart';
+import '../blocs/question/question_bloc.dart';
 import '../widgets/word_type_card.dart';
 
 class LearnedWordsView extends StatelessWidget {
@@ -20,6 +24,97 @@ class LearnedWordsView extends StatelessWidget {
           padding: context.paddingDefault,
           child: Column(
             children: [
+              Padding(
+                padding: context.paddingbottomLow,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 9,
+                      child: AspectRatio(
+                        aspectRatio: 1,
+                        child: MaterialButton(
+                          onPressed: () {
+                            context
+                                .read<QuestionBloc>()
+                                .add(QuestionStarted(TestQuestionType.meaning));
+                            Navigator.pushNamed(
+                                context, RouteNames.questionView);
+                          },
+                          color: AppColors.kSecondaryColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: context.paddingDefault,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "🔁",
+                                  style:
+                                      context.textTheme.headlineLarge?.copyWith(
+                                    color: AppColors.kWhiteColor,
+                                  ),
+                                ),
+                                Text(
+                                  "Kelimeleri Tekrar Gözden Geçir",
+                                  style: context.textTheme.titleSmall?.copyWith(
+                                    color: AppColors.kWhiteColor,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Spacer(
+                      flex: 1,
+                    ),
+                    Expanded(
+                      flex: 9,
+                      child: AspectRatio(
+                        aspectRatio: 1,
+                        child: MaterialButton(
+                          onPressed: () {
+                            context.read<QuestionBloc>().add(QuestionStarted(
+                                TestQuestionType.sentenceTranslation));
+                            Navigator.pushNamed(
+                                context, RouteNames.questionView);
+                          },
+                          color: AppColors.kSecondaryColor,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(10),
+                          ),
+                          child: Padding(
+                            padding: context.paddingDefault,
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  "✍️",
+                                  style:
+                                      context.textTheme.headlineLarge?.copyWith(
+                                    color: AppColors.kWhiteColor,
+                                  ),
+                                ),
+                                Text(
+                                  "Kelimeleri Cümle İçinde Gör",
+                                  style: context.textTheme.titleSmall?.copyWith(
+                                    color: AppColors.kWhiteColor,
+                                  ),
+                                  textAlign: TextAlign.center,
+                                ),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
               Padding(
                 padding: context.paddingVerticalLow,
                 child: ConstrainedBox(
