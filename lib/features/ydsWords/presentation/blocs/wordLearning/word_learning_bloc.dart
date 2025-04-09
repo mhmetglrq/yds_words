@@ -1,6 +1,7 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:equatable/equatable.dart';
 
+import '../../../../../config/constants/word_constants.dart';
 import '../../../../../core/resources/data_state.dart';
 import '../../../domain/entities/word_entity.dart';
 import '../../../domain/usecases/wordLearning/delete_all_learned_words_usecase.dart';
@@ -34,7 +35,9 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
         _getWordsUseCase = getWordsUseCase,
         _learnWordUsecase = learnWordUsecase,
         _speakWordUsecase = speakWordUsecase,
-        super(WordLearningInitial()) {
+        super(WordLearningInitial(
+          selectedWordType: WordConstants.wordTypes.first,
+        )) {
     on<LoadWords>(_onLoadWords);
     on<LoadLearnedWords>(_onLoadLearnedWords);
     on<LearnWord>(_onLearnWord);
@@ -48,16 +51,27 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
 
   Future<void> _onLoadWords(
       LoadWords event, Emitter<WordLearningState> emit) async {
-    emit(const WordLearningLoading());
+    emit(WordLearningLoading(selectedWordType: state.selectedWordType));
     final result = await _getWordsUseCase();
     if (result is DataSuccess) {
       emit(WordLearningLoaded(
-          words: result.data!,
-          currentWordIndex: 0,
-          learnedWords: state.learnedWords,
-          filteredLearnedWords: state.filteredLearnedWords));
+        words: result.data!,
+        currentWordIndex: 0,
+        learnedWords: state.learnedWords,
+        filteredLearnedWords: state.filteredLearnedWords,
+        selectedWordType: state.selectedWordType,
+      ));
     } else if (result is DataFailed) {
-      emit(WordLearningError(result.message ?? ""));
+      emit(
+        WordLearningError(
+          result.message ?? "",
+          selectedWordType: state.selectedWordType,
+          currentWordIndex: state.currentWordIndex,
+          filteredLearnedWords: state.filteredLearnedWords,
+          learnedWords: state.learnedWords,
+          words: state.words,
+        ),
+      );
     }
   }
 
@@ -68,6 +82,7 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
       words: state.words,
       learnedWords: state.learnedWords,
       filteredLearnedWords: state.filteredLearnedWords,
+      selectedWordType: state.selectedWordType,
     ));
     final result = await _getLearnedWordsUsecase();
     if (result is DataSuccess) {
@@ -76,9 +91,15 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
         currentWordIndex: state.currentWordIndex,
         learnedWords: result.data!,
         filteredLearnedWords: state.filteredLearnedWords,
+        selectedWordType: state.selectedWordType,
       ));
     } else if (result is DataFailed) {
-      emit(WordLearningError(result.message ?? ""));
+      emit(WordLearningError(result.message ?? "",
+          currentWordIndex: state.currentWordIndex,
+          words: state.words,
+          learnedWords: state.learnedWords,
+          filteredLearnedWords: state.filteredLearnedWords,
+          selectedWordType: state.selectedWordType));
     }
   }
 
@@ -88,19 +109,25 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
         currentWordIndex: state.currentWordIndex,
         words: state.words,
         learnedWords: state.learnedWords,
-        filteredLearnedWords: state.filteredLearnedWords));
+        filteredLearnedWords: state.filteredLearnedWords,
+        selectedWordType: state.selectedWordType));
     final result = await _learnWordUsecase.call(params: event.word);
     if (result is DataSuccess) {
       emit(WordLearningLearned(
           currentWordIndex: state.currentWordIndex,
           words: state.words,
           learnedWords: state.learnedWords,
-          filteredLearnedWords: state.filteredLearnedWords));
+          filteredLearnedWords: state.filteredLearnedWords,
+          selectedWordType: state.selectedWordType));
       add(LoadLearnedWords());
     } else if (result is DataFailed) {
       emit(WordLearningError(
         result.message ?? "",
         currentWordIndex: state.currentWordIndex,
+        words: state.words,
+        learnedWords: state.learnedWords,
+        filteredLearnedWords: state.filteredLearnedWords,
+        selectedWordType: state.selectedWordType,
       ));
     }
   }
@@ -111,31 +138,46 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
         currentWordIndex: state.currentWordIndex,
         learnedWords: state.learnedWords,
         words: state.words,
-        filteredLearnedWords: state.filteredLearnedWords));
+        filteredLearnedWords: state.filteredLearnedWords,
+        selectedWordType: state.selectedWordType));
     final result = await _deleteLearnedWordUsecase.call(params: event.word);
     if (result is DataSuccess) {
       emit(WordLearningDeleted(
           currentWordIndex: state.currentWordIndex,
           learnedWords: state.learnedWords,
           words: state.words,
-          filteredLearnedWords: state.filteredLearnedWords));
+          filteredLearnedWords: state.filteredLearnedWords,
+          selectedWordType: state.selectedWordType));
       add(LoadLearnedWords());
     } else if (result is DataFailed) {
       emit(WordLearningError(result.message ?? "",
-          currentWordIndex: state.currentWordIndex));
+          currentWordIndex: state.currentWordIndex,
+          words: state.words,
+          learnedWords: state.learnedWords,
+          filteredLearnedWords: state.filteredLearnedWords,
+          selectedWordType: state.selectedWordType));
     }
   }
 
   Future<void> _onDeleteAllLearnedWords(
       DeleteAllLearnedWords event, Emitter<WordLearningState> emit) async {
-    emit(WordLearningLoading(currentWordIndex: state.currentWordIndex));
+    emit(WordLearningLoading(
+        currentWordIndex: state.currentWordIndex,
+        words: state.words,
+        learnedWords: state.learnedWords,
+        filteredLearnedWords: state.filteredLearnedWords,
+        selectedWordType: state.selectedWordType));
     final result = await _deleteAllLearnedWordsUsecase();
     if (result is DataSuccess) {
       emit(WordLearningDeletedAll(currentWordIndex: 0));
       add(LoadLearnedWords());
     } else if (result is DataFailed) {
       emit(WordLearningError(result.message ?? "",
-          currentWordIndex: state.currentWordIndex));
+          currentWordIndex: state.currentWordIndex,
+          words: state.words,
+          learnedWords: state.learnedWords,
+          filteredLearnedWords: state.filteredLearnedWords,
+          selectedWordType: state.selectedWordType));
     }
   }
 
@@ -145,7 +187,8 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
         currentWordIndex: state.currentWordIndex,
         words: state.words,
         learnedWords: state.learnedWords,
-        filteredLearnedWords: state.filteredLearnedWords));
+        filteredLearnedWords: state.filteredLearnedWords,
+        selectedWordType: state.selectedWordType));
     String? params = event.word.word;
     if (event.isExample) {
       params = event.word.exampleSentence;
@@ -157,13 +200,18 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
             words: (state as WordLearningLoaded).words,
             currentWordIndex: state.currentWordIndex,
             learnedWords: state.learnedWords,
-            filteredLearnedWords: state.filteredLearnedWords));
+            filteredLearnedWords: state.filteredLearnedWords,
+            selectedWordType: state.selectedWordType));
       } else {
         emit(WordLearningInitial());
       }
     } else if (result is DataFailed) {
       emit(WordLearningError(result.message ?? "",
-          currentWordIndex: state.currentWordIndex));
+          currentWordIndex: state.currentWordIndex,
+          words: state.words,
+          learnedWords: state.learnedWords,
+          filteredLearnedWords: state.filteredLearnedWords,
+          selectedWordType: state.selectedWordType));
     }
   }
 
@@ -178,7 +226,8 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
             words: loadedState.words,
             currentWordIndex: nextIndex,
             learnedWords: loadedState.learnedWords,
-            filteredLearnedWords: loadedState.filteredLearnedWords));
+            filteredLearnedWords: loadedState.filteredLearnedWords,
+            selectedWordType: loadedState.selectedWordType));
       }
     }
   }
@@ -190,35 +239,38 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
       final prevIndex = loadedState.currentWordIndex - 1;
       if (prevIndex >= 0) {
         emit(WordLearningLoaded(
-            words: loadedState.words,
-            currentWordIndex: prevIndex,
-            learnedWords: loadedState.learnedWords,
-            filteredLearnedWords: loadedState.filteredLearnedWords));
+          words: loadedState.words,
+          currentWordIndex: prevIndex,
+          learnedWords: loadedState.learnedWords,
+          filteredLearnedWords: loadedState.filteredLearnedWords,
+          selectedWordType: loadedState.selectedWordType,
+        ));
       }
     }
   }
 
   Future<void> _filterLearnedWords(
       FilterLearnedWords event, Emitter<WordLearningState> emit) async {
-    emit(WordLearningLoading(
-        currentWordIndex: state.currentWordIndex,
-        words: state.words,
-        learnedWords: state.learnedWords,
-        filteredLearnedWords: state.filteredLearnedWords));
     List<WordEntity> filteredWords = [];
-    if (event.wordType.toLowerCase().contains("All".toLowerCase())) {
+    if (event.wordType != null) {
+      if (event.wordType == WordConstants.wordTypes.first) {
+        filteredWords = state.learnedWords;
+      } else {
+        filteredWords = state.learnedWords
+            .where((element) => event.wordType!
+                .toLowerCase()
+                .contains(element.type.toLowerCase()))
+            .toList();
+      }
+    } else if (event.wordType == null) {
       filteredWords = state.learnedWords;
-    } else {
-      filteredWords = state.learnedWords
-          .where((element) =>
-              event.wordType.toLowerCase().contains(element.type.toLowerCase()))
-          .toList();
     }
     emit(WordLearningLoaded(
       words: state.words,
       currentWordIndex: state.currentWordIndex,
       learnedWords: state.learnedWords,
       filteredLearnedWords: filteredWords,
+      selectedWordType: event.wordType ?? WordConstants.wordTypes.first,
     ));
   }
 }
