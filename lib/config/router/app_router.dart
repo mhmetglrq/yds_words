@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:yds_words/features/ydsWords/presentation/views/question_view.dart';
+import 'package:yds_words/features/ydsWords/presentation/views/test_result_view.dart';
 import '../../features/ydsWords/presentation/views/home.dart';
 import '../../features/ydsWords/presentation/views/learned_words_view.dart';
 import '../../features/ydsWords/presentation/views/word_learning_view.dart';
@@ -30,6 +32,13 @@ class AppRouter {
           settings: settings,
           view: LearnedWordsView(),
         );
+      case RouteNames.questionView:
+        return slideRoute(
+          settings: settings,
+          view: QuestionView(),
+        );
+      case RouteNames.testResultView:
+        return fadeRoute(settings: settings, view: TestResultView());
 
       // If no matching route is found, return an error page.
       default:
