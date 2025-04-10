@@ -13,13 +13,15 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
   final List<TestQuestionEntity> _questions = [];
   int _correctAnswerCount = 0;
 
-  QuestionBloc(this._generateQuestionsUseCase) : super(const QuestionInitial()) {
+  QuestionBloc(this._generateQuestionsUseCase)
+      : super(const QuestionInitial()) {
     on<QuestionStarted>(_onQuestionStarted);
     on<QuestionAnswered>(_onQuestionAnswered);
     on<QuestionNext>(_onQuestionNext);
   }
 
-  Future<void> _onQuestionStarted(QuestionStarted event, Emitter<QuestionState> emit) async {
+  Future<void> _onQuestionStarted(
+      QuestionStarted event, Emitter<QuestionState> emit) async {
     emit(const QuestionLoading());
 
     final result = await _generateQuestionsUseCase(params: event.questionType);
@@ -40,7 +42,8 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
     }
   }
 
-  void _onQuestionAnswered(QuestionAnswered event, Emitter<QuestionState> emit) {
+  void _onQuestionAnswered(
+      QuestionAnswered event, Emitter<QuestionState> emit) {
     final currentState = state;
     if (currentState is QuestionAnswering) {
       final currentQuestion = currentState.questions[currentState.currentIndex];
@@ -56,7 +59,7 @@ class QuestionBloc extends Bloc<QuestionEvent, QuestionState> {
         correctAnswerCount: _correctAnswerCount,
       ));
 
-      Future.delayed(const Duration(milliseconds: 500), () {
+      Future.delayed(const Duration(milliseconds: 700), () {
         add(const QuestionNext());
       });
     }

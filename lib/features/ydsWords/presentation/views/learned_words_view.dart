@@ -147,7 +147,12 @@ class LearnedWordsView extends StatelessWidget {
                           final word = state.filteredLearnedWords[index];
                           return Padding(
                             padding: context.paddingbottomLow,
-                            child: Card(
+                            child: AnimatedContainer(
+                              duration: Duration(milliseconds: 400),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10),
+                                color: AppColors.kScaffoldColor,
+                              ),
                               child: ListTile(
                                 title: Text(word.word,
                                     style: context.textTheme.titleMedium),
