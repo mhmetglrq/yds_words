@@ -105,10 +105,8 @@ class WordLearningRepositoryImpl implements WordLearningRepository {
   Future<DataState<List<WordEntity>>> getWords() async {
     try {
       // Kelimeleri ilgili box'lardan çekiyoruz
-      final words = await _hiveDatabaseService.getAllData(
-        _wordsBoxName,
-        closeBoxAfterOperation: true
-      );
+      final words = await _hiveDatabaseService.getAllData(_wordsBoxName,
+          closeBoxAfterOperation: true);
       final learnedWords = await _hiveDatabaseService.getAllData(
         _learnedWordsBoxName,
         closeBoxAfterOperation: true,

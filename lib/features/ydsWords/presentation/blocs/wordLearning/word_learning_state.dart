@@ -25,7 +25,13 @@ sealed class WordLearningState extends Equatable {
 }
 
 final class WordLearningInitial extends WordLearningState {
-  const WordLearningInitial({super.selectedWordType});
+  const WordLearningInitial({
+    super.selectedWordType,
+    super.learnedWords,
+    super.filteredLearnedWords,
+    super.words,
+    super.currentWordIndex,
+  });
 }
 
 final class WordLearningLoading extends WordLearningState {

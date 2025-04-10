@@ -47,7 +47,7 @@ class ProgressCard extends StatelessWidget {
                             BorderRadius.circular(8), // yuvarlak köşeler
                         child: LinearProgressIndicator(
                           minHeight: 8,
-                          value: (state.words.isEmpty ? 0.0 : state.learnedWords.length / state.words.length),
+                          value: state.learnedWords.length / 1025,
                           backgroundColor: AppColors.kInfoColor,
                           valueColor: AlwaysStoppedAnimation<Color>(
                             AppColors.kPrimaryColor,
@@ -81,7 +81,7 @@ class ProgressCard extends StatelessWidget {
                             style: context.textTheme.bodyMedium,
                           ),
                           Text(
-                            "${state.words.length}",
+                            "${1025 - state.learnedWords.length}",
                             style: context.textTheme.bodyMedium,
                           ),
                         ],

@@ -38,6 +38,7 @@ class Home extends StatelessWidget {
                 padding: context.paddingVerticalLow,
                 child: ElevatedButton(
                   onPressed: () {
+                    context.read<WordLearningBloc>().add(ResetLearning());
                     Navigator.pushNamed(context, RouteNames.wordLearningView);
                   },
                   style: ElevatedButton.styleFrom(

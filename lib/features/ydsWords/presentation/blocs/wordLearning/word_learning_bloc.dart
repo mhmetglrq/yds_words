@@ -47,12 +47,18 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
     on<NextWord>(_onNextWord); // Yeni olay
     on<PreviousWord>(_onPreviousWord); // Yeni olay
     on<FilterLearnedWords>(_filterLearnedWords);
+    on<ResetLearning>(_resetLearning);
   }
 
   Future<void> _onLoadWords(
       LoadWords event, Emitter<WordLearningState> emit) async {
-    emit(WordLearningLoading(selectedWordType: state.selectedWordType));
     final result = await _getWordsUseCase();
+    emit(WordLearningLoading(
+        selectedWordType: state.selectedWordType,
+        currentWordIndex: state.currentWordIndex,
+        words: state.words,
+        learnedWords: state.learnedWords,
+        filteredLearnedWords: state.filteredLearnedWords));
     if (result is DataSuccess) {
       emit(WordLearningLoaded(
         words: result.data!,
@@ -272,5 +278,17 @@ class WordLearningBloc extends Bloc<WordLearningEvent, WordLearningState> {
       filteredLearnedWords: filteredWords,
       selectedWordType: event.wordType ?? WordConstants.wordTypes.first,
     ));
+  }
+
+  Future<void> _resetLearning(
+      ResetLearning event, Emitter<WordLearningState> emit) async {
+    emit(WordLearningLoaded(
+      words: state.words,
+      currentWordIndex: 0,
+      learnedWords: state.learnedWords,
+      filteredLearnedWords: state.filteredLearnedWords,
+      selectedWordType: state.selectedWordType,
+    ));
+    add(LoadWords());
   }
 }
