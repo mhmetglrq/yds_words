@@ -1,5 +1,6 @@
 import 'package:yds_words/core/errors/app_exception.dart';
 import 'package:yds_words/core/resources/data_state.dart';
+import 'dart:math';
 
 import '../../domain/entities/test_question_entity.dart';
 import '../../domain/repositories/question_repository.dart';
@@ -83,19 +84,31 @@ class QuestionRepositoryImpl implements QuestionRepository {
 
   List<TestQuestionModel> _createMeaningQuestions(
       List<WordModel> learnedWords, List<WordModel> words) {
+    final random = Random();
     return learnedWords.map((learnedWord) {
-      final correctAnswer = learnedWord.translation;
+      final isEnglishToTurkish = random.nextBool();
+      final correctAnswer =
+          isEnglishToTurkish ? learnedWord.translation : learnedWord.word;
+      final questionText =
+          isEnglishToTurkish ? learnedWord.word : learnedWord.translation;
+
       final wrongOptions = words
-          .where((w) => w.translation != correctAnswer)
+          .where((w) =>
+              (isEnglishToTurkish ? w.translation : w.word) != correctAnswer)
           .toList()
         ..shuffle();
+
       final options = [
         correctAnswer,
-        ...wrongOptions.take(3).map((w) => w.translation),
+        ...wrongOptions
+            .take(3)
+            .map((w) => isEnglishToTurkish ? w.translation : w.word),
       ]..shuffle();
+
       final correctIndex = options.indexOf(correctAnswer);
+
       return TestQuestionModel(
-        questionText: learnedWord.word,
+        questionText: questionText,
         options: options,
         correctIndex: correctIndex,
         type: TestQuestionType.meaning,
@@ -105,21 +118,37 @@ class QuestionRepositoryImpl implements QuestionRepository {
 
   List<TestQuestionModel> _createSentenceFillQuestions(
       List<WordModel> learnedWords, List<WordModel> words) {
+    final random = Random();
     return learnedWords
         .where((w) => w.exampleSentence.contains(w.word))
         .map((learnedWord) {
-      final blankSentence =
-          learnedWord.exampleSentence.replaceFirst(learnedWord.word, '_____');
-      final correctAnswer = learnedWord.word;
-      final wrongOptions = words.where((w) => w.word != correctAnswer).toList()
+      final isEnglishToBlank = random.nextBool();
+
+      final questionText = isEnglishToBlank
+          ? learnedWord.exampleSentence.replaceFirst(learnedWord.word, '_____')
+          : learnedWord.exampleTranslation
+              .replaceFirst(learnedWord.translation, '_____');
+
+      final correctAnswer =
+          isEnglishToBlank ? learnedWord.word : learnedWord.translation;
+
+      final wrongOptions = words
+          .where((w) =>
+              (isEnglishToBlank ? w.word : w.translation) != correctAnswer)
+          .toList()
         ..shuffle();
+
       final options = [
         correctAnswer,
-        ...wrongOptions.take(3).map((w) => w.word),
+        ...wrongOptions
+            .take(3)
+            .map((w) => isEnglishToBlank ? w.word : w.translation),
       ]..shuffle();
+
       final correctIndex = options.indexOf(correctAnswer);
+
       return TestQuestionModel(
-        questionText: blankSentence,
+        questionText: questionText,
         options: options,
         correctIndex: correctIndex,
         type: TestQuestionType.sentenceFill,
@@ -129,21 +158,31 @@ class QuestionRepositoryImpl implements QuestionRepository {
 
   List<TestQuestionModel> _createSentenceTranslationQuestions(
       List<WordModel> learnedWords, List<WordModel> words) {
+    final random = Random();
     return learnedWords.map((learnedWord) {
-      final correctAnswer = learnedWord.exampleTranslation;
-      final questionText = learnedWord.exampleSentence;
+      final isEnglishToTurkish = random.nextBool();
+      final correctAnswer = isEnglishToTurkish
+          ? learnedWord.exampleTranslation
+          : learnedWord.exampleSentence;
+      final questionText = isEnglishToTurkish
+          ? learnedWord.exampleSentence
+          : learnedWord.exampleTranslation;
+
       final wrongOptions = words
-          .where((w) => w.exampleTranslation != correctAnswer)
-          .map((w) => w.exampleTranslation)
-          .where((t) => t.isNotEmpty)
+          .map((w) =>
+              isEnglishToTurkish ? w.exampleTranslation : w.exampleSentence)
+          .where((opt) => opt.isNotEmpty && opt != correctAnswer)
           .toSet()
           .toList()
         ..shuffle();
+
       final options = [
         correctAnswer,
         ...wrongOptions.take(3),
       ]..shuffle();
+
       final correctIndex = options.indexOf(correctAnswer);
+
       return TestQuestionModel(
         questionText: questionText,
         options: options,
