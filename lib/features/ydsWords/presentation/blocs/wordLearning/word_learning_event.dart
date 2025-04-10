@@ -45,3 +45,5 @@ class FilterLearnedWords extends WordLearningEvent {
   @override
   List<Object?> get props => [wordType];
 }
+
+class ResetLearning extends WordLearningEvent {}
