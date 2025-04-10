@@ -4,7 +4,6 @@ import 'package:yds_words/config/extensions/context_extension.dart';
 
 import '../../../../config/items/colors/app_colors.dart';
 import '../../../../config/router/route_names.dart';
-import '../../domain/entities/test_question_entity.dart';
 import '../blocs/question/question_bloc.dart';
 
 class TestResultView extends StatelessWidget {
