@@ -49,6 +49,11 @@ class QuestionAnswering extends QuestionState {
   });
 
   @override
-  List<Object?> get props =>
-      [questions, currentIndex, selectedOptionIndex, isAnswered, correctAnswerCount];
+  List<Object?> get props => [
+        questions,
+        currentIndex,
+        selectedOptionIndex,
+        isAnswered,
+        correctAnswerCount
+      ];
 }
